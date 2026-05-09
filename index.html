@@ -911,7 +911,10 @@ function makeResult(text, idx) {
   const el = document.createElement('div');
   el.className = 'result-item';
   el.style.animationDelay = (idx * 0.07) + 's';
-  el.innerHTML = `<div class="result-text">${escapeHTML(text)}</div><button class="btn-copy" onclick="copyText(this, \`${escapeForAttr(text)}\`)">Copy</button>`;
+  el.innerHTML = `
+    <div class="result-text">${escapeHTML(text)}</div>
+    <button class="btn-copy" onclick="copyText(this)">Copy</button>
+  `;
   return el;
 }
 
@@ -922,7 +925,6 @@ function getDefaultBtnLabel(tool) {
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 function escapeHTML(str) { return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
-function escapeForAttr(str) { return str.replace(/`/g,"'").replace(/\$/g,'\\$'); }
 
 // ─────────────────────── EXPORT AS TXT (PRO ONLY) ───────────────────────
 function exportAsTxt(tool) {
@@ -957,7 +959,11 @@ function exportAsTxt(tool) {
 }
 
 // ─────────────────────── COPY ───────────────────────
-function copyText(btn, text) {
+function copyText(btn) {
+  // Read text directly from the sibling .result-text element to avoid escaping issues
+  const textContainer = btn.previousElementSibling;
+  const text = textContainer ? textContainer.innerText : '';
+  
   navigator.clipboard.writeText(text).then(() => {
     btn.textContent = 'Copied!';
     setTimeout(() => btn.textContent = 'Copy', 1800);
@@ -1018,7 +1024,7 @@ function showUpgradeModal() {
 
     try {
       // 1. Call backend to create order
-      const response = await fetch('http://localhost:3000/api/create-order', { method: 'POST' });
+      const response = await fetch('https://instagramgrowthtoolkitbackend.onrender.com/api/create-order', { method: 'POST' });
       if (!response.ok) throw new Error('Failed to create order');
       const order = await response.json();
 
@@ -1036,7 +1042,7 @@ function showUpgradeModal() {
           
           // 3. Verify Payment with backend
           try {
-            const verifyRes = await fetch('http://localhost:3000/api/verify-payment', {
+            const verifyRes = await fetch('https://instagramgrowthtoolkitbackend.onrender.com/api/verify-payment', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
               body: JSON.stringify(response)
