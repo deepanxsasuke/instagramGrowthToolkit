@@ -65,7 +65,17 @@
       font-size: .85rem; font-weight: 600; cursor: pointer; transition: opacity .2s, transform .2s;
     }
     .btn-nav:hover { opacity: .85; transform: translateY(-1px); }
-    @media(max-width:600px) { .nav-links { display:none; } }
+    .menu-toggle { display: none; background: none; border: none; color: var(--text); cursor: pointer; padding: 0.5rem; }
+    @media(max-width:600px) { 
+      .menu-toggle { display: block; }
+      .nav-links { 
+        display: none; flex-direction: column; position: absolute; top: 64px; left: 0; width: 100%; 
+        background: rgba(6,6,18,0.95); backdrop-filter: blur(20px); border-bottom: 1px solid var(--border);
+        padding: 1.5rem; gap: 1.5rem; align-items: flex-start;
+      }
+      .nav-links.active { display: flex; animation: fadeUp 0.3s ease; }
+      .nav-links .btn-nav { width: 100%; text-align: center; }
+    }
 
     /* ─────────────────────── HERO ─────────────────────── */
     #hero {
@@ -178,6 +188,20 @@
     }
     .btn-generate:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(124,58,237,0.55); }
     .btn-generate:disabled { opacity: .5; cursor: not-allowed; transform: none; }
+
+    @media(max-width:600px) {
+      section { padding: 50px 1rem; }
+      #hero { padding: 80px 1rem 40px; }
+      .tool-card { padding: 1.5rem; }
+      .tool-tabs { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; }
+      .tab-btn { padding: 0.6rem 0.5rem; font-size: 0.85rem; width: 100%; }
+      .tab-btn[data-tab="captions"] { order: 1; }
+      .tab-btn[data-tab="bio"] { order: 2; }
+      .tab-btn[data-tab="reels"] { order: 3; }
+      .tab-btn[data-tab="hashtags"] { order: 4; }
+      .tool-input { font-size: 1rem; padding: 0.9rem 1rem; }
+      .btn-generate { font-size: 1rem; padding: 0.9rem 1.5rem; }
+    }
 
     /* Spinner */
     .spinner { width: 18px; height: 18px; border: 2px solid rgba(255,255,255,.3); border-top-color: #fff; border-radius: 50%; animation: spin .7s linear infinite; }
@@ -309,12 +333,15 @@
     <span class="icon">📸</span>
     <span class="grad">GrowthKit</span>
   </div>
-  <div class="nav-links">
-    <a href="#features">Features</a>
-    <a href="#toolkit">Tools</a>
-    <a href="#pricing">Pricing</a>
-    <button class="btn-nav" onclick="scrollTo('#toolkit')">Try Free</button>
+  <div class="nav-links" id="nav-links">
+    <a href="#features" onclick="toggleMobileMenu()">Features</a>
+    <a href="#toolkit" onclick="toggleMobileMenu()">Tools</a>
+    <a href="#pricing" onclick="toggleMobileMenu()">Pricing</a>
+    <button class="btn-nav" onclick="document.getElementById('toolkit').scrollIntoView({behavior:'smooth'}); toggleMobileMenu()">Try Free</button>
   </div>
+  <button class="menu-toggle" id="menu-toggle" onclick="toggleMobileMenu()">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+  </button>
 </nav>
 
 <!-- HERO -->
@@ -548,6 +575,11 @@
 const isPro = localStorage.getItem('isPro') === 'true';
 const MAX_GENERATIONS = isPro ? Infinity : 2;
 const SHOW_FREE_RESULTS = isPro ? Infinity : 2;
+
+function toggleMobileMenu() {
+  const navLinks = document.getElementById('nav-links');
+  navLinks.classList.toggle('active');
+}
 
 const todayStr = new Date().toDateString();
 let savedUsage = JSON.parse(localStorage.getItem('dailyUsage')) || { date: todayStr, counts: { captions: 0, hashtags: 0, bio: 0, reels: 0 } };
