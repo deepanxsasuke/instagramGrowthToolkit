@@ -21,6 +21,6 @@ Do not copy, resell, re-upload, or use this website/code without permission from
 
 ## 📩 Permission & Contact
 
-For collaboration or usage permission, contact email:@[dpllabs@gmail.com](mailto:dpllabs@gmail.com)
+For collaboration or usage permission, contact email:[dpllabs@gmail.com](mailto:dpllabs@gmail.com)
 
 © 2026 DPL Labs. All Rights Reserved.
