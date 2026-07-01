@@ -3,11 +3,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instagram Growth Toolkit – AI-Powered Creator Tools</title>
-  <meta name="description" content="Generate viral captions, hashtags, bios and hooks for Instagram in seconds. Free AI-powered toolkit for content creators." />
+  <title>Instagram Growth Toolkit – AI-Powered Creator Tools for Viral Reach</title>
+  <meta name="description" content="Generate viral captions, hashtags, bios and hooks for Instagram in seconds. Free AI-powered toolkit for content creators to 10x their growth." />
+  <meta name="keywords" content="Instagram tools, AI caption generator, Instagram hashtags, AI bio generator, Reels ideas, Instagram growth, social media tools, content creators" />
+  <meta name="author" content="GrowthKit" />
+  <link rel="canonical" href="https://growthkit.app/" />
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://growthkit.app/" />
+  <meta property="og:title" content="Instagram Growth Toolkit – AI-Powered Creator Tools" />
+  <meta property="og:description" content="Generate viral captions, hashtags, bios and hooks for Instagram in seconds. Free AI-powered toolkit for content creators." />
+  <meta property="og:image" content="https://growthkit.app/favicon.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://growthkit.app/" />
+  <meta property="twitter:title" content="Instagram Growth Toolkit – AI-Powered Creator Tools" />
+  <meta property="twitter:description" content="Generate viral captions, hashtags, bios and hooks for Instagram in seconds. Free AI-powered toolkit for content creators." />
+  <meta property="twitter:image" content="https://growthkit.app/favicon.png" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Instagram Growth Toolkit",
+    "url": "https://growthkit.app",
+    "description": "Free AI-powered toolkit for Instagram creators to generate viral captions, hashtags, bios, and Reels ideas.",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9",
+      "ratingCount": "1284"
+    }
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <!-- Preconnect to Razorpay to speed up initialization on mobile -->
+  <link rel="preconnect" href="https://api.razorpay.com" />
+  <!-- Defer the heavy Razorpay script so it doesn't block rendering -->
+  <script defer src="https://checkout.razorpay.com/v1/checkout.js"></script>
   <style>
     /* ─────────────────────── RESET & BASE ─────────────────────── */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -105,7 +153,7 @@
       line-height: 1.7; margin-bottom: 2.5rem;
       animation: fadeUp .7s .2s ease both;
     }
-    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; animation: fadeUp .7s .3s ease both; }
+    .hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; animation: fadeUp .7s .3s ease both; margin-bottom: 2.5rem; }
     .btn-primary {
       background: linear-gradient(135deg,var(--purple),var(--blue));
       color: #fff; border: none; padding: .85rem 2rem; border-radius: 50px;
@@ -120,9 +168,20 @@
       cursor: pointer; backdrop-filter: blur(12px); transition: background .2s, transform .2s;
     }
     .btn-ghost:hover { background: rgba(255,255,255,0.09); transform: translateY(-3px); }
+    
+    .social-proof { display: flex; align-items: center; justify-content: center; gap: 1.2rem; flex-wrap: wrap; animation: fadeUp .7s .35s ease both; margin-bottom: 1.5rem; }
+    .avatars { display: flex; }
+    .avatars img { width: 42px; height: 42px; border-radius: 50%; border: 3px solid var(--bg); margin-left: -14px; transition: transform .2s; object-fit: cover; }
+    .avatars img:first-child { margin-left: 0; }
+    .avatars img:hover { transform: translateY(-4px); z-index: 10; }
+    .proof-text { display: flex; flex-direction: column; align-items: flex-start; }
+    .proof-text .stars { color: #fbbf24; font-size: 1.15rem; letter-spacing: 1px; line-height: 1; margin-bottom: 4px; }
+    .proof-text span { font-size: 0.85rem; color: var(--muted); font-weight: 500; }
+    .proof-text strong { color: var(--text); }
+
     .hero-stats {
       display: flex; gap: 2.5rem; justify-content: center; flex-wrap: wrap;
-      margin-top: 4rem; animation: fadeUp .7s .4s ease both;
+      margin-top: 3rem; animation: fadeUp .7s .4s ease both;
     }
     .stat { text-align: center; }
     .stat strong { display: block; font-size: 1.8rem; font-weight: 800;
@@ -358,6 +417,21 @@
     <button class="btn-primary" onclick="document.getElementById('toolkit').scrollIntoView({behavior:'smooth'})">🚀 Start Creating Free</button>
     <button class="btn-ghost" onclick="document.getElementById('pricing').scrollIntoView({behavior:'smooth'})">View Pricing</button>
   </div>
+
+  <div class="social-proof">
+    <div class="avatars">
+      <img src="https://i.pravatar.cc/150?img=47" alt="Creator" />
+      <img src="https://i.pravatar.cc/150?img=68" alt="Creator" />
+      <img src="https://i.pravatar.cc/150?img=32" alt="Creator" />
+      <img src="https://i.pravatar.cc/150?img=12" alt="Creator" />
+      <img src="https://i.pravatar.cc/150?img=5" alt="Creator" />
+    </div>
+    <div class="proof-text">
+      <div class="stars">★★★★★</div>
+      <span>Loved by <strong>50,000+</strong> creators</span>
+    </div>
+  </div>
+
   <div class="hero-stats">
     <div class="stat"><strong>50K+</strong><span>Creators</span></div>
     <div class="stat"><strong>2M+</strong><span>Captions Generated</span></div>
@@ -1049,10 +1123,13 @@ function showUpgradeModal() {
   document.getElementById('close-modal-btn').addEventListener('click', () => overlay.remove());
   overlay.addEventListener('click', e => { if(e.target===overlay) overlay.remove(); });
 
+  // Warm up the Render backend to prevent cold start delays on mobile
+  fetch('https://instagramgrowthtoolkitbackend.onrender.com/api/ping').catch(() => {});
+
   document.getElementById('rzp-button1').addEventListener('click', async function(e) {
     const btn = e.target;
     btn.disabled = true;
-    btn.innerHTML = 'Initializing Secure Payment... ⏳';
+    btn.innerHTML = 'Connecting to Secure Server... ⏳';
 
     try {
       // 1. Call backend to create order

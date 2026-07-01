@@ -11,6 +11,9 @@ const port = 3000;
 app.use(cors());
 app.use(express.json());
 
+// Wake-up endpoint to prevent cold start delays
+app.get('/api/ping', (req, res) => res.status(200).send('pong'));
+
 // Initialize Razorpay
 const razorpay = new Razorpay({
   key_id: process.env.RAZORPAY_KEY_ID,
