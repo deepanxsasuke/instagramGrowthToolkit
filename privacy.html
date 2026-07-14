@@ -3,7 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Privacy Policy - GrowthKit</title>
+  <title>Privacy Policy - iGrowthKit</title>
+  <meta name="description" content="Read our privacy policy to understand how iGrowthKit collects, uses, and safeguards creator information, including cookie details and third-party advertising policies." />
+  <meta name="keywords" content="privacy policy, igrowthkit privacy, doubleclick cookie, adsense privacy policy, tracking cookies" />
+  <link rel="canonical" href="https://growthkit.app/privacy.html" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://growthkit.app/privacy.html" />
+  <meta property="og:title" content="Privacy Policy - iGrowthKit" />
+  <meta property="og:description" content="Read our privacy policy to understand how iGrowthKit collects, uses, and safeguards creator information." />
+  <meta property="og:image" content="https://growthkit.app/favicon.png" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Privacy Policy - iGrowthKit" />
+  <meta name="twitter:description" content="Read our privacy policy to understand how iGrowthKit collects, uses, and safeguards creator information." />
+  <meta name="twitter:image" content="https://growthkit.app/favicon.png" />
+
   <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -40,19 +57,57 @@
     .nav-logo span.icon { font-size: 1.4rem; }
     .nav-logo .grad { background: linear-gradient(90deg,#a855f7,#3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+
     main {
       flex: 1; padding: 120px 1.5rem 60px; max-width: 800px; margin: 0 auto; width: 100%;
     }
-    main h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; }
-    main p { color: var(--muted); line-height: 1.8; margin-bottom: 1.2rem; font-size: 1.05rem; }
-    main h2 { font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem; color: #fff; }
-    main a { color: var(--blue); text-decoration: none; }
-    main a:hover { text-decoration: underline; }
-    
-    footer {
-      border-top: 1px solid var(--border); padding: 2.5rem 1.5rem; text-align: center; color: var(--muted); font-size: .875rem;
+    h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; }
+    p { color: var(--muted); line-height: 1.8; margin-bottom: 1.2rem; font-size: 1.02rem; }
+    h2 { font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem; color: #fff; }
+    ul { list-style: disc; margin-left: 1.5rem; margin-bottom: 1.5rem; color: var(--muted); line-height: 1.8; }
+    li { margin-bottom: 0.5rem; }
+    a { color: var(--blue); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* EXPANDED FOOTER */
+    .footer-main {
+      border-top: 1px solid var(--border); padding: 4rem 1.5rem 2rem; background: rgba(6,6,18,0.5); backdrop-filter: blur(10px); position: relative; z-index: 1; margin-top: auto;
     }
-    footer .footer-logo { font-size: 1.1rem; font-weight: 800; margin-bottom: .5rem; }
+    .footer-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem;
+    }
+    @media(max-width:768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-brand-col { grid-column: 1 / -1; }
+    }
+    @media(max-width:480px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-brand-col .footer-logo-row {
+      display: flex; align-items: center; gap: .6rem; font-weight: 800; font-size: 1.15rem; margin-bottom: .8rem;
+    }
+    .footer-brand-col p { color: var(--muted); font-size: .875rem; line-height: 1.7; max-width: 300px; margin-bottom: 1.2rem; }
+    .footer-social { display: flex; gap: .7rem; }
+    .footer-social a {
+      width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,.06);
+      border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; text-decoration: none; transition: background .2s, border-color .2s;
+    }
+    .footer-social a:hover { background: rgba(168,85,247,.2); border-color: rgba(168,85,247,.4); }
+    .footer-col h4 { font-size: .85rem; font-weight: 700; color: var(--text); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .footer-col ul li a { color: var(--muted); text-decoration: none; font-size: .875rem; transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--text); }
+    .footer-bottom {
+      max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem;
+      border-top: 1px solid var(--border); display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 1rem;
+      font-size: .8rem; color: var(--muted);
+    }
+    .footer-bottom a { color: var(--muted); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--text); }
   </style>
 </head>
 <body>
@@ -60,34 +115,123 @@
 <nav>
   <a href="index.html" class="nav-logo">
     <span class="icon">📸</span>
-    <span class="grad">GrowthKit</span>
+    <span class="grad">iGrowthKit</span>
   </a>
+  <div class="nav-links">
+    <a href="index.html#features">Features</a>
+    <a href="index.html#toolkit">Tools</a>
+    <a href="blog.html">Blog</a>
+  </div>
 </nav>
 
 <main>
   <h1>Privacy Policy</h1>
-  <p>We respect your privacy.</p>
-  <p>This website does not collect any personal information directly from users. However, we may use third-party services such as Google AdSense that use cookies to display relevant advertisements.</p>
-  <p>Google may use cookies (including the DoubleClick cookie) to serve ads based on a user’s visit to this website and other websites on the internet.</p>
-  <p>Users may opt out of personalized advertising by visiting: <br/><a href="https://adssettings.google.com" target="_blank" rel="noopener noreferrer">https://adssettings.google.com</a></p>
-  <p>This website does not sell, trade, or share personal information with others.</p>
-  <p>If you have any questions regarding this Privacy Policy, please contact us.</p>
-  <p style="font-size:0.9rem; margin-top:2rem;">Last updated: January 2026</p>
+  <p>Last updated: July 13, 2026</p>
+  
+  <p>At iGrowthKit (accessible from growthkit.app), one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by iGrowthKit and how we use it.</p>
+  
+  <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us at <a href="mailto:dpllabs2026@gmail.com">dpllabs2026@gmail.com</a>.</p>
+
+  <h2>1. Consent</h2>
+  <p>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
+
+  <h2>2. Information We Collect</h2>
+  <p>iGrowthKit does not require account registration or login to use the basic free tiers of our tools. We do not harvest, read, or catalog the prompts, keywords, or topics you type into our generators. The input data is processed temporarily in memory to generate AI suggestions and is never permanently stored on our servers.</p>
+  <p>If you upgrade to the Pro plan, we collect necessary payment transactional tokens provided securely by Razorpay. We do not collect or store your credit card digits, UPI passwords, or netbanking credentials directly; all payments are processed through Razorpay's secure PCI-DSS compliant infrastructure.</p>
+
+  <h2>3. Log Files</h2>
+  <p>iGrowthKit follows a standard procedure of using log files. These files log visitors when they visit websites. All hosting companies do this as part of hosting services' analytics. The information collected by log files includes internet protocol (IP) addresses, browser type, Internet Service Provider (ISP), date and time stamp, referring/exit pages, and possibly the number of clicks. These are not linked to any information that is personally identifiable. The purpose of the information is for analyzing trends, administering the site, tracking users' movement on the website, and gathering demographic information.</p>
+
+  <h2>4. Cookies and Web Beacons</h2>
+  <p>Like any other website, iGrowthKit uses 'cookies'. These cookies are used to store information including visitors' preferences, and the pages on the website that the visitor accessed or visited. The information is used to optimize the users' experience by customizing our web page content based on visitors' browser type and/or other information.</p>
+  <p>For more detailed info about cookies, please read our <a href="cookie.html">Cookie Policy</a>.</p>
+
+  <h2>5. Google DoubleClick DART Cookie</h2>
+  <p>Google is one of the third-party vendors on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to growthkit.app and other sites on the internet. However, visitors may choose to decline the use of DART cookies by visiting the Google ad and content network Privacy Policy at the following URL: <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">https://policies.google.com/technologies/ads</a></p>
+
+  <h2>6. Advertising Partners Privacy Policies</h2>
+  <p>You may consult this list to find the Privacy Policy for each of the advertising partners of iGrowthKit. Third-party ad servers or ad networks use technologies like cookies, JavaScript, or Web Beacons that are used in their respective advertisements and links that appear on iGrowthKit, which are sent directly to users' browsers. They automatically receive your IP address when this occurs. These technologies are used to measure the effectiveness of their advertising campaigns and/or to personalize the advertising content that you see on websites that you visit.</p>
+  <p>Note that iGrowthKit has no access to or control over these cookies that are used by third-party advertisers.</p>
+
+  <h2>7. Third Party Privacy Policies</h2>
+  <p>iGrowthKit's Privacy Policy does not apply to other advertisers or websites. Thus, we are advising you to consult the respective Privacy Policies of these third-party ad servers for more detailed information. It may include their practices and instructions about how to opt-out of certain options.</p>
+  <p>You can choose to disable cookies through your individual browser options. To know more detailed information about cookie management with specific web browsers, it can be found at the browsers' respective websites.</p>
+
+  <h2>8. CCPA Privacy Rights (Do Not Sell My Personal Information)</h2>
+  <p>Under the CCPA, among other rights, California consumers have the right to:</p>
+  <ul>
+    <li>Request that a business that collects a consumer's personal data disclose the categories and specific pieces of personal data that a business has collected about consumers.</li>
+    <li>Request that a business delete any personal data about the consumer that a business has collected.</li>
+    <li>Request that a business that sells a consumer's personal data, not sell the consumer's personal data.</li>
+  </ul>
+  <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
+
+  <h2>9. GDPR Data Protection Rights</h2>
+  <p>We want to make sure you are fully aware of all of your data protection rights. Every user is entitled to the following:</p>
+  <ul>
+    <li><strong>The right to access:</strong> You have the right to request copies of your personal data. We may charge you a small fee for this service.</li>
+    <li><strong>The right to rectification:</strong> You have the right to request that we correct any information you believe is inaccurate. You also have the right to request that we complete the information you believe is incomplete.</li>
+    <li><strong>The right to erasure:</strong> You have the right to request that we erase your personal data, under certain conditions.</li>
+    <li><strong>The right to restrict processing:</strong> You have the right to request that we restrict the processing of your personal data, under certain conditions.</li>
+    <li><strong>The right to object to processing:</strong> You have the right to object to our processing of your personal data, under certain conditions.</li>
+    <li><strong>The right to data portability:</strong> You have the right to request that we transfer the data that we have collected to another organization, or directly to you, under certain conditions.</li>
+  </ul>
+  <p>If you make a request, we have one month to respond to you. If you would like to exercise any of these rights, please contact us.</p>
+
+  <h2>10. Children's Information</h2>
+  <p>Another part of our priority is adding protection for children while using the internet. We encourage parents and guardians to observe, participate in, and/or monitor and guide their online activity.</p>
+  <p>iGrowthKit does not knowingly collect any Personal Identifiable Information from children under the age of 13. If you think that your child provided this kind of information on our website, we strongly encourage you to contact us immediately and we will do our best efforts to promptly remove such information from our records.</p>
 </main>
 
-<footer>
-  <div class="footer-logo">📸 <span style="background:linear-gradient(90deg,#a855f7,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">GrowthKit</span></div>
-  <p>AI-powered Instagram toolkit for content creators.</p>
-  
-  <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; margin-top:1.5rem; margin-bottom:1rem;">
-    <a href="about.html" style="color:var(--muted); text-decoration:none; font-size:0.9rem; transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">About Us</a>
-    <a href="privacy.html" style="color:var(--muted); text-decoration:none; font-size:0.9rem; transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Privacy Policy</a>
-    <a href="terms.html" style="color:var(--muted); text-decoration:none; font-size:0.9rem; transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Terms of Service</a>
-    <a href="contact.html" style="color:var(--muted); text-decoration:none; font-size:0.9rem; transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Contact Us</a>
+<footer class="footer-main">
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <div class="footer-logo-row">
+        <span>📸</span>
+        <span style="background:linear-gradient(90deg,#a855f7,#3b82f6); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">iGrowthKit</span>
+      </div>
+      <p>Advanced AI-powered toolkit for content creators, designed to optimize organic reach, engagement, and consistent audience growth on Instagram.</p>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="index.html#toolkit">AI Caption Generator</a></li>
+        <li><a href="index.html#toolkit">Hashtag Optimizer</a></li>
+        <li><a href="index.html#toolkit">AI Bio Creator</a></li>
+        <li><a href="index.html#toolkit">Reels Idea Tool</a></li>
+        <li><a href="index.html#pricing">Pro Pricing Plans</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="blog.html">Creator Blog</a></li>
+        <li><a href="index.html#faq">Frequently Asked Questions</a></li>
+        <li><a href="about.html">About Our Mission</a></li>
+        <li><a href="contact.html">Support Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+        <li><a href="cookie.html">Cookie Policy</a></li>
+      </ul>
+    </div>
   </div>
-
-  <p style="margin-top:.8rem;">Made By Surya Brothers❤️ · <a href="index.html#pricing" style="color:var(--purple-light);text-decoration:none;">Upgrade to Pro</a></p>
-  <p style="margin-top:.8rem;font-size:.78rem;">© 2026 GrowthKit. All rights reserved.</p>
+  
+  <div class="footer-bottom">
+    <p>© 2026 iGrowthKit. All rights reserved. Made with ❤️ by Surya Brothers.</p>
+    <p>
+      <a href="privacy.html">Privacy</a> · 
+      <a href="terms.html">Terms</a> · 
+      <a href="cookie.html">Cookies</a>
+    </p>
+  </div>
 </footer>
 
 </body>

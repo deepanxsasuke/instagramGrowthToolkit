@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Creator Insights Blog - iGrowthKit</title>
+  <meta name="description" content="Stay ahead of the Instagram algorithm with our creator playbooks, hashtag strategies, Reels concept tips, and AI writing advice." />
+  <meta name="keywords" content="instagram blog, social media tips, creator guides, viral caption strategy, reels visual guide, igrowthkit blog" />
+  <link rel="canonical" href="https://growthkit.app/blog.html" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://growthkit.app/blog.html" />
+  <meta property="og:title" content="Creator Insights Blog - iGrowthKit" />
+  <meta property="og:description" content="Stay ahead of the Instagram algorithm with our creator playbooks, hashtag strategies, Reels concept tips, and AI writing advice." />
+  <meta property="og:image" content="https://growthkit.app/favicon.png" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Creator Insights Blog - iGrowthKit" />
+  <meta name="twitter:description" content="Stay ahead of the Instagram algorithm with our creator playbooks." />
+  <meta name="twitter:image" content="https://growthkit.app/favicon.png" />
+
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "iGrowthKit Creator Insights Blog",
+    "url": "https://growthkit.app/blog.html",
+    "description": "Educational blog for Instagram content creators covering copywriting, visual hooks, hashtag strategies, and algorithm growth."
+  }
+  </script>
+
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #060612;
+      --surface: rgba(255,255,255,0.05);
+      --border: rgba(255,255,255,0.10);
+      --purple: #7c3aed;
+      --purple-light: #a855f7;
+      --blue: #3b82f6;
+      --pink: #ec4899;
+      --text: #f1f5f9;
+      --muted: #94a3b8;
+      --radius: 20px;
+    }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* BACKGROUND ORBS */
+    .orb {
+      position: fixed; border-radius: 50%; filter: blur(120px);
+      pointer-events: none; z-index: 0;
+    }
+    .orb-1 { width: 600px; height: 600px; background: rgba(124,58,237,0.15); top: -200px; left: -150px; }
+    .orb-2 { width: 500px; height: 500px; background: rgba(59,130,246,0.1); bottom: -150px; right: -100px; }
+
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 100;
+      background: rgba(6,6,18,0.7); backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 1.5rem; height: 64px;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .nav-logo { display: flex; align-items: center; gap: .6rem; font-weight: 800; font-size: 1.1rem; text-decoration: none; color: white; }
+    .nav-logo span.icon { font-size: 1.4rem; }
+    .nav-logo .grad { background: linear-gradient(90deg,#a855f7,#3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .btn-nav {
+      background: linear-gradient(135deg,var(--purple),var(--blue));
+      color: #fff; border: none; padding: .5rem 1.2rem; border-radius: 50px;
+      font-size: .85rem; font-weight: 600; cursor: pointer; transition: opacity .2s, transform .2s;
+      text-decoration: none; display: inline-block;
+    }
+    .btn-nav:hover { opacity: .85; transform: translateY(-1px); }
+
+    main {
+      flex: 1; padding: 120px 1.5rem 60px; max-width: 1100px; margin: 0 auto; width: 100%; position: relative; z-index: 1;
+    }
+    .hero-section { text-align: center; margin-bottom: 3rem; }
+    .badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.3);
+      color: var(--purple-light); font-size: .8rem; font-weight: 600;
+      padding: .35rem .85rem; border-radius: 50px; margin-bottom: 1.5rem;
+    }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; letter-spacing: -1px; margin-bottom: 1.2rem; line-height: 1.2; }
+    h1 .grad { background: linear-gradient(135deg,#a855f7,#3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .lead { font-size: 1.2rem; color: var(--muted); line-height: 1.7; max-width: 600px; margin: 0 auto; }
+
+    /* CATEGORY FILTER TABS */
+    .filter-tabs {
+      display: flex; gap: .6rem; flex-wrap: wrap; justify-content: center; margin-bottom: 3rem;
+    }
+    .filter-btn {
+      background: var(--surface); border: 1px solid var(--border); color: var(--muted);
+      padding: .6rem 1.3rem; border-radius: 50px; font-size: .875rem; font-weight: 600;
+      cursor: pointer; transition: all .25s; backdrop-filter: blur(10px);
+    }
+    .filter-btn.active, .filter-btn:hover {
+      background: linear-gradient(135deg,var(--purple),var(--blue));
+      border-color: transparent; color: #fff;
+    }
+
+    /* ARTICLES GRID */
+    .articles-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 2rem;
+    }
+    .blog-card {
+      background: rgba(255,255,255,0.03); backdrop-filter: blur(20px);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 2rem; display: flex; flex-direction: column; gap: 1rem;
+      transition: transform .3s, border-color .3s, box-shadow .3s;
+    }
+    .blog-card:hover {
+      transform: translateY(-5px); border-color: rgba(168,85,247,0.3);
+      box-shadow: 0 20px 60px rgba(124,58,237,0.15);
+    }
+    .blog-card.hidden { display: none; }
+    
+    .blog-category {
+      display: inline-flex; align-items: center;
+      font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+      color: var(--purple-light); background: rgba(168,85,247,0.12);
+      border: 1px solid rgba(168,85,247,0.25); padding: .25rem .75rem; border-radius: 50px;
+      width: fit-content;
+    }
+    .blog-card h2 { font-size: 1.2rem; font-weight: 800; line-height: 1.4; color: #fff; }
+    .blog-card p { font-size: .9rem; color: var(--muted); line-height: 1.65; flex: 1; }
+    .blog-meta { display: flex; align-items: center; gap: 1rem; font-size: .78rem; color: var(--muted); }
+    .blog-read-more {
+      display: inline-flex; align-items: center; gap: .4rem;
+      color: var(--purple-light); font-size: .88rem; font-weight: 600;
+      text-decoration: none; transition: gap .2s; margin-top: 0.5rem;
+    }
+    .blog-read-more:hover { gap: .7rem; }
+
+    /* EXPANDED FOOTER */
+    .footer-main {
+      border-top: 1px solid var(--border); padding: 4rem 1.5rem 2rem; background: rgba(6,6,18,0.5); backdrop-filter: blur(10px); position: relative; z-index: 1; margin-top: auto;
+    }
+    .footer-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem;
+    }
+    @media(max-width:768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-brand-col { grid-column: 1 / -1; }
+    }
+    @media(max-width:480px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-brand-col .footer-logo-row {
+      display: flex; align-items: center; gap: .6rem; font-weight: 800; font-size: 1.15rem; margin-bottom: .8rem;
+    }
+    .footer-brand-col p { color: var(--muted); font-size: .875rem; line-height: 1.7; max-width: 300px; margin-bottom: 1.2rem; }
+    .footer-social { display: flex; gap: .7rem; }
+    .footer-social a {
+      width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,.06);
+      border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; text-decoration: none; transition: background .2s, border-color .2s;
+    }
+    .footer-social a:hover { background: rgba(168,85,247,.2); border-color: rgba(168,85,247,.4); }
+    .footer-col h4 { font-size: .85rem; font-weight: 700; color: var(--text); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .footer-col ul li a { color: var(--muted); text-decoration: none; font-size: .875rem; transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--text); }
+    .footer-bottom {
+      max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem;
+      border-top: 1px solid var(--border); display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 1rem;
+      font-size: .8rem; color: var(--muted);
+    }
+    .footer-bottom a { color: var(--muted); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--text); }
+  </style>
+</head>
+<body>
+
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
+<nav>
+  <a href="index.html" class="nav-logo">
+    <span class="icon">📸</span>
+    <span class="grad">iGrowthKit</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#features">Features</a>
+    <a href="index.html#toolkit">Tools</a>
+    <a href="blog.html" style="color: #fff;">Blog</a>
+    <a href="index.html#pricing" class="btn-nav">Upgrade Pro</a>
+  </div>
+</nav>
+
+<main>
+  <div class="hero-section">
+    <div class="badge">📖 Creator Insights & Strategies</div>
+    <h1>The iGrowthKit <span class="grad">Blog</span></h1>
+    <p class="lead">Actionable copywriting guides, hashtag strategies, Reels frameworks, and AI-powered growth plays for content creators.</p>
+  </div>
+
+  <div class="filter-tabs">
+    <button class="filter-btn active" data-category="all">All Articles</button>
+    <button class="filter-btn" data-category="captions">Captions</button>
+    <button class="filter-btn" data-category="hashtags">Hashtags</button>
+    <button class="filter-btn" data-category="reels">Reels</button>
+    <button class="filter-btn" data-category="growth">Growth</button>
+    <button class="filter-btn" data-category="ai">AI Tools</button>
+  </div>
+
+  <div class="articles-grid">
+    <!-- Article 1 -->
+    <div class="blog-card" data-category="captions">
+      <div class="blog-category">Captions</div>
+      <h2>How to Write Viral Instagram Captions That Get 10x More Engagement</h2>
+      <p>Master copywriting blueprints, scroll-stopping visual hook lines, storytelling loops, and strategic calls to action (CTAs) that generate comments and saves.</p>
+      <div class="blog-meta">
+        <span>📅 July 2026</span>
+        <span>⏱️ 5 min read</span>
+      </div>
+      <a href="blog-1.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 2 -->
+    <div class="blog-card" data-category="hashtags">
+      <div class="blog-category">Hashtags</div>
+      <h2>100 Best Instagram Hashtags for Every Niche in 2026</h2>
+      <p>Curated sets of high-performing, active hashtags for fitness, beauty, travel, business, and food creators, along with ranking math details.</p>
+      <div class="blog-meta">
+        <span>📅 July 2026</span>
+        <span>⏱️ 6 min read</span>
+      </div>
+      <a href="blog-2.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 3 -->
+    <div class="blog-card" data-category="reels">
+      <div class="blog-category">Reels</div>
+      <h2>Instagram Reels Ideas: 50 Creative Concepts for Any Niche</h2>
+      <p>Visual storyboard frameworks, hooks, B-roll structures, and transition timing guides designed to optimize completion rate metrics.</p>
+      <div class="blog-meta">
+        <span>📅 July 2026</span>
+        <span>⏱️ 7 min read</span>
+      </div>
+      <a href="blog-3.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 4 -->
+    <div class="blog-card" data-category="growth">
+      <div class="blog-category">Growth</div>
+      <h2>How to Write an Instagram Bio That Makes People Follow You Instantly</h2>
+      <p>A step-by-step audit guide covering name field SEO, value propositions, credibility lines, and strong CTAs to double your visitor conversion.</p>
+      <div class="blog-meta">
+        <span>📅 July 2026</span>
+        <span>⏱️ 5 min read</span>
+      </div>
+      <a href="blog-4.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 5 -->
+    <div class="blog-card" data-category="growth">
+      <div class="blog-category">Growth</div>
+      <h2>The Complete Instagram Growth Guide for Beginners (2026)</h2>
+      <p>Learn the fundamental pillars of organic distribution: profile indexing, consistent schedules, engagement grids, and reels integration.</p>
+      <div class="blog-meta">
+        <span>📅 June 2026</span>
+        <span>⏱️ 9 min read</span>
+      </div>
+      <a href="blog-5.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 6 -->
+    <div class="blog-card" data-category="ai">
+      <div class="blog-category">AI Tools</div>
+      <h2>How AI Caption Generators Actually Work</h2>
+      <p>Uncover the inner workings of NLP models, custom prompt mapping, and how to successfully inject personal branding styles into AI drafts.</p>
+      <div class="blog-meta">
+        <span>📅 June 2026</span>
+        <span>⏱️ 6 min read</span>
+      </div>
+      <a href="blog-6.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 7 -->
+    <div class="blog-card" data-category="growth">
+      <div class="blog-category">Growth</div>
+      <h2>Instagram Algorithm Explained: What Drives Reach in 2026</h2>
+      <p>Understand search placement metrics, explorer seed signals, shares-to-views ratios, and watch-time criteria that govern post delivery.</p>
+      <div class="blog-meta">
+        <span>📅 June 2026</span>
+        <span>⏱️ 8 min read</span>
+      </div>
+      <a href="blog-7.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 8 -->
+    <div class="blog-card" data-category="reels">
+      <div class="blog-category">Reels</div>
+      <h2>Hook Writing Masterclass: The First 3 Seconds That Win Every Reel</h2>
+      <p>Discover visual curiosity loops, negative-frame statements, and text-reveal formulas that maximize initial retention rates.</p>
+      <div class="blog-meta">
+        <span>📅 May 2026</span>
+        <span>⏱️ 5 min read</span>
+      </div>
+      <a href="blog-8.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 9 -->
+    <div class="blog-card" data-category="growth">
+      <div class="blog-category">Growth</div>
+      <h2>Best Time to Post on Instagram: The Data-Backed Guide</h2>
+      <p>Analyzing global hourly stats, time zone distribution strategies, and how to align publishing directly with real-time active users.</p>
+      <div class="blog-meta">
+        <span>📅 May 2026</span>
+        <span>⏱️ 6 min read</span>
+      </div>
+      <a href="blog-9.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 10 -->
+    <div class="blog-card" data-category="hashtags">
+      <div class="blog-category">Hashtags</div>
+      <h2>Instagram Hashtag Strategy: Small, Medium & Large Tags Explained</h2>
+      <p>Deep-dive into directory scaling math. Build optimal tag lists that capture early rank placements on small volumes before scaling up.</p>
+      <div class="blog-meta">
+        <span>📅 May 2026</span>
+        <span>⏱️ 6 min read</span>
+      </div>
+      <a href="blog-10.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 11 -->
+    <div class="blog-card" data-category="growth">
+      <div class="blog-category">Growth</div>
+      <h2>How to Create a Content Calendar for Instagram</h2>
+      <p>A structured approach to visual planning. Balance educational guides with promotional runs and client case-studies seamlessly.</p>
+      <div class="blog-meta">
+        <span>📅 April 2026</span>
+        <span>⏱️ 7 min read</span>
+      </div>
+      <a href="blog-11.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 12 -->
+    <div class="blog-card" data-category="reels">
+      <div class="blog-category">Reels</div>
+      <h2>Instagram Stories vs Reels: Which Drives More Growth in 2026?</h2>
+      <p>Compare the two engines. Learn how Reels acts as a cold discoverability portal while Stories constructs warm follower conversions.</p>
+      <div class="blog-meta">
+        <span>📅 April 2026</span>
+        <span>⏱️ 6 min read</span>
+      </div>
+      <a href="blog-12.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 13 -->
+    <div class="blog-card" data-category="growth">
+      <div class="blog-category">Growth</div>
+      <h2>Carousel Posts on Instagram: The Secret Weapon for Saves</h2>
+      <p>Why sliding card decks command high algorithmic points. Design visual cheatsheets that readers save and revisit repeatedly.</p>
+      <div class="blog-meta">
+        <span>📅 March 2026</span>
+        <span>⏱️ 6 min read</span>
+      </div>
+      <a href="blog-13.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 14 -->
+    <div class="blog-card" data-category="growth">
+      <div class="blog-category">Growth</div>
+      <h2>How Fitness Creators Grow on Instagram: The Exact Playbook</h2>
+      <p>From workout splits to transformation reels, learn the specific blueprints active coaches use to build digital trust and sell products.</p>
+      <div class="blog-meta">
+        <span>📅 March 2026</span>
+        <span>⏱️ 7 min read</span>
+      </div>
+      <a href="blog-14.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 15 -->
+    <div class="blog-card" data-category="growth">
+      <div class="blog-category">Growth</div>
+      <h2>How to Grow a Food Instagram Account from 0 to 10K Followers</h2>
+      <p>Learn lighting layouts, recipe structure hooks, macro lenses tips, and pacing tricks that keep foodies bookmarking your recipes.</p>
+      <div class="blog-meta">
+        <span>📅 March 2026</span>
+        <span>⏱️ 8 min read</span>
+      </div>
+      <a href="blog-15.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 16 -->
+    <div class="blog-card" data-category="growth">
+      <div class="blog-category">Growth</div>
+      <h2>Travel Instagram Growth: Strategies That Actually Work</h2>
+      <p>How to combine aesthetic scenery clips with highly practical travel guides to capture broad exploration traffic successfully.</p>
+      <div class="blog-meta">
+        <span>📅 February 2026</span>
+        <span>⏱️ 7 min read</span>
+      </div>
+      <a href="blog-16.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 17 -->
+    <div class="blog-card" data-category="ai">
+      <div class="blog-category">AI Tools</div>
+      <h2>Using AI for Social Media: The Complete Creator's Guide</h2>
+      <p>Optimize your workflow by integrating AI tools in prompt mapping, batch copywriting, calendar scheduling, and hook testing.</p>
+      <div class="blog-meta">
+        <span>📅 February 2026</span>
+        <span>⏱️ 8 min read</span>
+      </div>
+      <a href="blog-17.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 18 -->
+    <div class="blog-card" data-category="growth">
+      <div class="blog-category">Growth</div>
+      <h2>Instagram Engagement Rate: What's Good & How to Improve Yours</h2>
+      <p>Learn what engagement rates mean per tier, how to calculate them, and how to drive community dialogue in comment fields.</p>
+      <div class="blog-meta">
+        <span>📅 January 2026</span>
+        <span>⏱️ 6 min read</span>
+      </div>
+      <a href="blog-18.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 19 -->
+    <div class="blog-card" data-category="captions">
+      <div class="blog-category">Captions</div>
+      <h2>How to Write Instagram Captions for Business Accounts</h2>
+      <p>Learn the balance between authority building and customer acquisition hooks, with templates for service listings and product launches.</p>
+      <div class="blog-meta">
+        <span>📅 January 2026</span>
+        <span>⏱️ 6 min read</span>
+      </div>
+      <a href="blog-19.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+
+    <!-- Article 20 -->
+    <div class="blog-card" data-category="growth">
+      <div class="blog-category">Growth</div>
+      <h2>The Psychology of Viral Instagram Content: Why Some Posts Explode</h2>
+      <p>Analyze the psychological triggers of sharing: social currency, validation, relatability, high-arousal emotions, and visual satisfaction.</p>
+      <div class="blog-meta">
+        <span>📅 January 2026</span>
+        <span>⏱️ 8 min read</span>
+      </div>
+      <a href="blog-20.html" class="blog-read-more">Read Full Article →</a>
+    </div>
+  </div>
+</main>
+
+<footer class="footer-main">
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <div class="footer-logo-row">
+        <span>📸</span>
+        <span style="background:linear-gradient(90deg,#a855f7,#3b82f6); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">iGrowthKit</span>
+      </div>
+      <p>Advanced AI-powered toolkit for content creators, designed to optimize organic reach, engagement, and consistent audience growth on Instagram.</p>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="index.html#toolkit">AI Caption Generator</a></li>
+        <li><a href="index.html#toolkit">Hashtag Optimizer</a></li>
+        <li><a href="index.html#toolkit">AI Bio Creator</a></li>
+        <li><a href="index.html#toolkit">Reels Idea Tool</a></li>
+        <li><a href="index.html#pricing">Pro Pricing Plans</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="blog.html">Creator Blog</a></li>
+        <li><a href="index.html#faq">Frequently Asked Questions</a></li>
+        <li><a href="about.html">About Our Mission</a></li>
+        <li><a href="contact.html">Support Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+        <li><a href="cookie.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2026 iGrowthKit. All rights reserved. Made with ❤️ by Surya Brothers.</p>
+    <p>
+      <a href="privacy.html">Privacy</a> · 
+      <a href="terms.html">Terms</a> · 
+      <a href="cookie.html">Cookies</a>
+    </p>
+  </div>
+</footer>
+
+<script>
+// CATEGORY FILTER
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+
+    const cat = btn.dataset.category;
+    document.querySelectorAll('.blog-card').forEach(card => {
+      if (cat === 'all' || card.dataset.category === cat) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>

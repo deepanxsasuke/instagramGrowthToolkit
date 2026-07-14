@@ -3,12 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instagram Growth Toolkit – AI-Powered Creator Tools for Viral Reach</title>
-  <meta name="description" content="Generate viral captions, hashtags, bios and hooks for Instagram in seconds. Free AI-powered toolkit for content creators to 10x their growth." />
-  <meta name="keywords" content="Instagram tools, AI caption generator, Instagram hashtags, AI bio generator, Reels ideas, Instagram growth, social media tools, content creators" />
-  <meta name="author" content="GrowthKit" />
+  <title>iGrowthKit – Free AI-Powered Instagram Growth Tools for Creators</title>
+  <meta name="description" content="Generate viral captions, trending hashtags, magnetic bios and scroll-stopping Reels ideas for Instagram in seconds. Free AI-powered toolkit trusted by 50,000+ creators." />
+  <meta name="keywords" content="Instagram growth toolkit, AI caption generator, Instagram hashtags generator, AI bio generator, Reels ideas generator, Instagram growth, social media tools, content creators, iGrowthKit" />
+  <meta name="author" content="iGrowthKit" />
+  <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://growthkit.app/" />
-  
+  <meta property="og:site_name" content="iGrowthKit" />
+  <meta property="og:locale" content="en_US" />
+  <meta name="twitter:site" content="@iGrowthKit" />
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://growthkit.app/" />
@@ -32,7 +36,7 @@
   {
     "@context": "https://schema.org",
     "@type": "WebApplication",
-    "name": "Instagram Growth Toolkit",
+    "name": "iGrowthKit",
     "url": "https://growthkit.app",
     "description": "Free AI-powered toolkit for Instagram creators to generate viral captions, hashtags, bios, and Reels ideas.",
     "applicationCategory": "BusinessApplication",
@@ -47,6 +51,34 @@
       "ratingValue": "4.9",
       "ratingCount": "1284"
     }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Is iGrowthKit free to use?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes! iGrowthKit has a free tier that gives you 2 generations per tool per day. Upgrade to Pro for unlimited generations." }
+      },
+      {
+        "@type": "Question",
+        "name": "What AI tools does iGrowthKit offer?",
+        "acceptedAnswer": { "@type": "Answer", "text": "iGrowthKit offers four AI-powered tools: Instagram Caption Generator, Hashtag Generator, Bio Generator, and Reels Idea Generator." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does the AI caption generator work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Enter your post topic and choose a mood/vibe. Our AI generates 5 unique, emoji-rich captions with built-in hashtags, ready to copy and post instantly." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Pro plan price?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The Pro plan is currently available at a special offer price of ₹49/month (regular price ₹199/month), giving unlimited generations for all tools." }
+      }
+    ]
   }
   </script>
 
@@ -374,6 +406,216 @@
     /* ─────────────────────── SCROLLBAR ─────────────────────── */
     ::-webkit-scrollbar { width: 6px; } ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: rgba(168,85,247,.4); border-radius: 3px; }
+
+    /* ─────────────────────── LEARN MORE ACCORDION ─────────────────────── */
+    .learn-more-section {
+      margin-top: 3rem; padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .learn-more-title {
+      font-size: 1.1rem; font-weight: 700; color: var(--purple-light);
+      margin-bottom: 1.2rem; display: flex; align-items: center; gap: .5rem;
+      letter-spacing: -.3px;
+    }
+    .accordion-item {
+      border: 1px solid var(--border); border-radius: 14px; margin-bottom: .7rem;
+      overflow: hidden; transition: border-color .2s;
+    }
+    .accordion-item:hover { border-color: rgba(168,85,247,.3); }
+    .accordion-btn {
+      width: 100%; background: rgba(255,255,255,.04); border: none; color: var(--text);
+      padding: 1rem 1.3rem; text-align: left; font-size: .95rem; font-weight: 600;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      font-family: inherit; transition: background .2s;
+    }
+    .accordion-btn:hover { background: rgba(255,255,255,.07); }
+    .accordion-icon {
+      font-size: 1.1rem; transition: transform .3s; color: var(--purple-light); flex-shrink: 0;
+    }
+    .accordion-item.open .accordion-icon { transform: rotate(45deg); }
+    .accordion-body {
+      max-height: 0; overflow: hidden; transition: max-height .4s ease;
+      background: rgba(255,255,255,.02);
+    }
+    .accordion-item.open .accordion-body { max-height: 1000px; }
+    .accordion-content {
+      padding: 1rem 1.3rem 1.3rem; color: var(--muted); font-size: .9rem; line-height: 1.75;
+    }
+    .accordion-content ul { margin: .5rem 0 .5rem 1.2rem; }
+    .accordion-content li { margin-bottom: .4rem; }
+    .accordion-content strong { color: var(--text); }
+
+    /* ─────────────────────── WHY CHOOSE ─────────────────────── */
+    #why-choose .why-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;
+    }
+    .why-card {
+      padding: 1.8rem; display: flex; flex-direction: column; gap: .8rem;
+    }
+    .why-icon-wrap {
+      width: 52px; height: 52px; border-radius: 14px; display: flex; align-items: center;
+      justify-content: center; font-size: 1.5rem; flex-shrink: 0;
+    }
+    .why-card h3 { font-size: 1rem; font-weight: 700; }
+    .why-card p { font-size: .875rem; color: var(--muted); line-height: 1.65; }
+
+    /* ─────────────────────── HOW IT WORKS ─────────────────────── */
+    #how-it-works .steps {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem; position: relative;
+    }
+    .step-card {
+      padding: 2rem 1.5rem; text-align: center; position: relative;
+    }
+    .step-number {
+      width: 56px; height: 56px; border-radius: 50%; margin: 0 auto 1.2rem;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; font-weight: 900;
+      background: linear-gradient(135deg, var(--purple), var(--blue));
+      box-shadow: 0 4px 20px rgba(124,58,237,.4);
+    }
+    .step-card h3 { font-size: 1rem; font-weight: 700; margin-bottom: .5rem; }
+    .step-card p { font-size: .875rem; color: var(--muted); line-height: 1.65; }
+    .step-arrow {
+      position: absolute; right: -1.2rem; top: 50%; transform: translateY(-50%);
+      font-size: 1.5rem; color: var(--purple-light); z-index: 2;
+    }
+    @media(max-width:768px) { .step-arrow { display: none; } }
+
+    /* ─────────────────────── TESTIMONIALS ─────────────────────── */
+    #testimonials .test-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;
+    }
+    .test-card { padding: 1.8rem; display: flex; flex-direction: column; gap: 1rem; }
+    .test-stars { color: #fbbf24; font-size: 1rem; letter-spacing: 2px; }
+    .test-quote { font-size: .92rem; color: var(--muted); line-height: 1.7; flex: 1; font-style: italic; }
+    .test-author { display: flex; align-items: center; gap: .75rem; }
+    .test-avatar { width: 44px; height: 44px; border-radius: 50%; border: 2px solid rgba(168,85,247,.4); object-fit: cover; }
+    .test-name { font-weight: 700; font-size: .9rem; }
+    .test-handle { font-size: .78rem; color: var(--purple-light); }
+
+    /* ─────────────────────── FAQ ─────────────────────── */
+    #faq .faq-list { max-width: 780px; margin: 0 auto; }
+    .faq-item {
+      border: 1px solid var(--border); border-radius: 14px; margin-bottom: .8rem; overflow: hidden;
+      transition: border-color .2s;
+    }
+    .faq-item:hover { border-color: rgba(168,85,247,.3); }
+    .faq-btn {
+      width: 100%; background: rgba(255,255,255,.04); border: none; color: var(--text);
+      padding: 1.1rem 1.4rem; text-align: left; font-size: .95rem; font-weight: 600;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      font-family: inherit; transition: background .2s; gap: 1rem;
+    }
+    .faq-btn:hover { background: rgba(255,255,255,.07); }
+    .faq-icon { font-size: 1.2rem; color: var(--purple-light); flex-shrink: 0; transition: transform .3s; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+    .faq-answer { max-height: 0; overflow: hidden; transition: max-height .4s ease; }
+    .faq-item.open .faq-answer { max-height: 400px; }
+    .faq-answer-inner { padding: .2rem 1.4rem 1.2rem; color: var(--muted); font-size: .9rem; line-height: 1.75; }
+
+    /* ─────────────────────── INSTAGRAM GUIDE ─────────────────────── */
+    #instagram-guide .guide-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;
+    }
+    .guide-item { display: flex; gap: 1.2rem; align-items: flex-start; }
+    .guide-icon-box {
+      width: 48px; height: 48px; border-radius: 12px; flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+      background: rgba(124,58,237,.15); border: 1px solid rgba(168,85,247,.2);
+    }
+    .guide-item h3 { font-size: 1rem; font-weight: 700; margin-bottom: .4rem; }
+    .guide-item p { font-size: .875rem; color: var(--muted); line-height: 1.65; }
+
+    /* ─────────────────────── CREATOR TIPS ─────────────────────── */
+    #creator-tips .tips-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1.3rem;
+    }
+    .tip-card {
+      padding: 1.6rem 1.4rem; border-radius: 18px; text-align: center;
+      background: rgba(255,255,255,.04); border: 1px solid var(--border);
+      transition: transform .3s, border-color .3s, box-shadow .3s;
+    }
+    .tip-card:hover { transform: translateY(-5px); border-color: rgba(168,85,247,.35); box-shadow: 0 16px 50px rgba(124,58,237,.2); }
+    .tip-emoji { font-size: 2rem; margin-bottom: .8rem; }
+    .tip-card h3 { font-size: .95rem; font-weight: 700; margin-bottom: .5rem; }
+    .tip-card p { font-size: .82rem; color: var(--muted); line-height: 1.6; }
+
+    /* ─────────────────────── AI TIPS ─────────────────────── */
+    #ai-tips .ai-tips-inner {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;
+    }
+    @media(max-width:680px) { #ai-tips .ai-tips-inner { grid-template-columns: 1fr; } }
+    #ai-tips p { color: var(--muted); font-size: .93rem; line-height: 1.78; margin-bottom: 1rem; }
+    #ai-tips ul { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    #ai-tips ul li { display: flex; gap: .6rem; align-items: flex-start; font-size: .9rem; color: var(--muted); line-height: 1.6; }
+    #ai-tips ul li::before { content: "✦"; color: var(--purple-light); flex-shrink: 0; margin-top: .1rem; }
+    .ai-tips-highlight {
+      padding: 1.8rem; border-radius: 20px;
+      background: linear-gradient(135deg, rgba(124,58,237,.15), rgba(59,130,246,.1));
+      border: 1px solid rgba(168,85,247,.25);
+    }
+    .ai-tips-highlight h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 1rem; color: #fff; }
+
+    /* ─────────────────────── BLOG PREVIEW ─────────────────────── */
+    #blog-preview .blog-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.5rem;
+    }
+    .blog-card { padding: 1.8rem; display: flex; flex-direction: column; gap: 1rem; }
+    .blog-category {
+      display: inline-flex; align-items: center; gap: .3rem;
+      font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+      color: var(--purple-light); background: rgba(168,85,247,.12);
+      border: 1px solid rgba(168,85,247,.25); padding: .25rem .75rem; border-radius: 50px;
+      width: fit-content;
+    }
+    .blog-card h3 { font-size: 1.05rem; font-weight: 700; line-height: 1.4; }
+    .blog-card p { font-size: .875rem; color: var(--muted); line-height: 1.65; flex: 1; }
+    .blog-meta { display: flex; align-items: center; gap: 1rem; font-size: .78rem; color: var(--muted); }
+    .blog-read-more {
+      display: inline-flex; align-items: center; gap: .4rem;
+      color: var(--purple-light); font-size: .88rem; font-weight: 600;
+      text-decoration: none; transition: gap .2s;
+    }
+    .blog-read-more:hover { gap: .7rem; }
+
+    /* ─────────────────────── EXPANDED FOOTER ─────────────────────── */
+    .footer-main {
+      position: relative; z-index: 1; border-top: 1px solid var(--border);
+      padding: 4rem 1.5rem 2rem;
+    }
+    .footer-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem;
+    }
+    @media(max-width:768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-brand-col { grid-column: 1 / -1; }
+    }
+    @media(max-width:480px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-brand-col .footer-logo-row {
+      display: flex; align-items: center; gap: .6rem; font-weight: 800; font-size: 1.15rem; margin-bottom: .8rem;
+    }
+    .footer-brand-col p { color: var(--muted); font-size: .875rem; line-height: 1.7; max-width: 300px; margin-bottom: 1.2rem; }
+    .footer-social { display: flex; gap: .7rem; }
+    .footer-social a {
+      width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,.06);
+      border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; text-decoration: none; transition: background .2s, border-color .2s;
+    }
+    .footer-social a:hover { background: rgba(168,85,247,.2); border-color: rgba(168,85,247,.4); }
+    .footer-col h4 { font-size: .85rem; font-weight: 700; color: var(--text); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .footer-col ul li a { color: var(--muted); text-decoration: none; font-size: .875rem; transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--text); }
+    .footer-bottom {
+      max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem;
+      border-top: 1px solid var(--border); display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 1rem;
+      font-size: .8rem; color: var(--muted);
+    }
+    .footer-bottom a { color: var(--muted); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--text); }
   </style>
 </head>
 <body>
@@ -396,6 +638,7 @@
     <a href="#features" onclick="toggleMobileMenu()">Features</a>
     <a href="#toolkit" onclick="toggleMobileMenu()">Tools</a>
     <a href="#pricing" onclick="toggleMobileMenu()">Pricing</a>
+    <a href="blog.html" onclick="toggleMobileMenu()">Blog</a>
     <button class="btn-nav" onclick="document.getElementById('toolkit').scrollIntoView({behavior:'smooth'}); toggleMobileMenu()">Try Free</button>
   </div>
   <button class="menu-toggle" id="menu-toggle" onclick="toggleMobileMenu()">
@@ -509,6 +752,91 @@
       <div class="usage-bar"><span class="usage-tag" id="usage-captions">Free: 0 / 2 used</span></div>
       <div class="results" id="results-captions"></div>
       <div id="export-wrap-captions" style="display:none;margin-top:.8rem;text-align:right;"><button class="btn-export" onclick="exportAsTxt('captions')">📄 Export as TXT <span class="export-pro-badge">PRO</span></button></div>
+
+      <!-- LEARN MORE: CAPTION GENERATOR -->
+      <div class="learn-more-section">
+        <div class="learn-more-title">📖 Learn More About the Caption Generator</div>
+        <div class="accordion-item" id="acc-cap-what">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-cap-what')">
+            <span>What does the Caption Generator do?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>The <strong>AI Caption Generator</strong> creates 5 unique, ready-to-post Instagram captions tailored to your topic and mood. Each caption includes relevant emojis and hashtags, saving you hours of brainstorming every week.</p>
+              <p>Unlike generic caption templates, iGrowthKit's AI understands Instagram culture — it writes captions that sound human, match your selected vibe, and are optimised for engagement. Whether you need something funny, professional, aesthetic, or motivational, the tool adapts instantly.</p>
+              <p>Simply enter your post idea (e.g. "morning gym routine" or "Goa beach sunset") and select a tone. The AI generates captions that match your niche, audience, and personality — ready to copy and paste directly into Instagram.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="acc-cap-why">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-cap-why')">
+            <span>Why do creators need an AI caption generator?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>Writing captions consistently is one of the hardest parts of being a content creator. Studies show that <strong>captions with the right tone and CTAs can increase engagement by up to 3x</strong> — yet most creators either reuse the same formula or spend 30+ minutes per caption.</p>
+              <p>An AI caption generator solves this by:</p>
+              <ul>
+                <li>Eliminating writer's block instantly</li>
+                <li>Generating fresh, varied caption styles every time</li>
+                <li>Matching your posting mood or brand voice</li>
+                <li>Saving 5–10 hours of content writing per month</li>
+                <li>Helping you post consistently without burnout</li>
+              </ul>
+              <p>Creators who post 5–7 times per week especially benefit — you always have caption ideas ready before the perfect photo even goes live.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="acc-cap-practices">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-cap-practices')">
+            <span>Best practices for great Instagram captions</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <ul>
+                <li><strong>Start with a hook:</strong> Your first line must stop the scroll. Ask a question, make a bold claim, or start mid-story.</li>
+                <li><strong>Add a CTA:</strong> "Save this for later," "Tag a friend," or "What's your take?" increases comments and shares significantly.</li>
+                <li><strong>Use line breaks:</strong> Instagram shows only the first 2–3 lines. Make them count, then use breaks to encourage "more" taps.</li>
+                <li><strong>Match caption length to content type:</strong> Reels = short punchy captions. Carousels = longer storytelling captions.</li>
+                <li><strong>Use 3–10 hashtags:</strong> Place them at the end or in the first comment for cleaner aesthetics.</li>
+                <li><strong>Stay consistent:</strong> Your caption style is part of your brand voice. Readers should be able to tell it's you without seeing the handle.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="acc-cap-examples">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-cap-examples')">
+            <span>Caption examples for popular niches</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p><strong>Fitness:</strong> "No days off. No excuses. Just results. 💪 Started this journey 90 days ago and the only thing I regret is not starting sooner. Drop a 🔥 if you're on this grind with me. #fitness #gymlife #transformation"</p>
+              <p><strong>Travel:</strong> "Sunsets hit different when you've earned them. 🌅 This view after a 6-hour trek was worth every blister. Where's your dream destination? Drop it below 👇 #travel #wanderlust #hikelife"</p>
+              <p><strong>Food:</strong> "Homemade biryani that took 3 hours and disappeared in 10 minutes. 🍛 Worth it? Absolutely. Recipe dropping this weekend — save this post! #foodie #biryani #homecooking"</p>
+              <p><strong>Fashion:</strong> "Outfit checks: ✅ Confidence: ✅ Monday ready? Not even close — but at least I look the part 😂 #ootd #fashionista #mondayvibes"</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="acc-cap-faq">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-cap-faq')">
+            <span>Caption Generator FAQs</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p><strong>Q: How many captions does it generate?</strong><br>A: The tool generates 5 unique captions per generation. Pro users can generate unlimited times.</p>
+              <p><strong>Q: Can I use the captions as-is or should I edit them?</strong><br>A: The captions are ready to post, but personalising them with your own details (location, specific name, personal anecdote) always improves results.</p>
+              <p><strong>Q: Which mood setting works best for growth?</strong><br>A: Relatable and motivational captions typically see the highest share/save rates. Funny captions drive more comments.</p>
+              <p><strong>Q: Does it work for business accounts?</strong><br>A: Yes! Choose "Professional" tone for business-oriented captions that maintain authority while staying engaging.</p>
+              <p><strong>Q: Can I use these captions for multiple platforms?</strong><br>A: Absolutely. The captions work for Instagram, Facebook, LinkedIn (professional tone), and even YouTube descriptions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -523,6 +851,73 @@
       <div class="usage-bar"><span class="usage-tag" id="usage-hashtags">Free: 0 / 2 used</span></div>
       <div class="results" id="results-hashtags"></div>
       <div id="export-wrap-hashtags" style="display:none;margin-top:.8rem;text-align:right;"><button class="btn-export" onclick="exportAsTxt('hashtags')">📄 Export as TXT <span class="export-pro-badge">PRO</span></button></div>
+
+      <!-- LEARN MORE: HASHTAG GENERATOR -->
+      <div class="learn-more-section">
+        <div class="learn-more-title">#️⃣ Learn More About the Hashtag Generator</div>
+        <div class="accordion-item" id="acc-hash-what">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-hash-what')">
+            <span>What does the Hashtag Generator do?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>The <strong>AI Hashtag Generator</strong> analyses your niche or keyword and produces 5 curated sets of trending Instagram hashtags (5 hashtags per set = 25 total). Each set is strategically balanced between high-volume, medium, and niche-specific tags to maximise your content's discoverability.</p>
+              <p>Instead of copying the same generic hashtags every post, this tool generates fresh, targeted hashtag combinations that match your content's intent — helping you reach new audiences in your specific niche rather than drowning in a sea of irrelevant tags.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="acc-hash-strategy">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-hash-strategy')">
+            <span>The smart hashtag strategy for Instagram growth</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>Not all hashtags are equal. Using only mega-popular hashtags (#fitness with 500M posts) means your content disappears in seconds. The <strong>3-tier hashtag strategy</strong> works best:</p>
+              <ul>
+                <li><strong>Large hashtags (1M–50M posts):</strong> 2–3 tags for broad reach. e.g. #fitness, #travel</li>
+                <li><strong>Medium hashtags (100K–1M posts):</strong> 3–5 tags for targeted reach. e.g. #fitnessmotivation, #travelblogger</li>
+                <li><strong>Niche hashtags (10K–100K posts):</strong> 3–5 tags for high engagement. e.g. #morningworkoutroutine, #budgettraveltips</li>
+                <li><strong>Community hashtags:</strong> 1–2 tags that your audience actively follows. e.g. #fitfamIndia</li>
+              </ul>
+              <p>iGrowthKit's AI automatically balances this mix so every generated set gives you the best chance at Explore page placement.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="acc-hash-tips">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-hash-tips')">
+            <span>Hashtag tips & common mistakes to avoid</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <ul>
+                <li><strong>Use 5–15 hashtags</strong> per post — studies show diminishing returns beyond 15.</li>
+                <li><strong>Rotate your sets</strong> — don't use the exact same hashtags every post or Instagram may reduce your reach.</li>
+                <li><strong>Avoid banned hashtags</strong> — some tags are hidden by Instagram. Our AI avoids known problematic tags.</li>
+                <li><strong>Put hashtags in the caption or first comment</strong> — both work equally well for reach.</li>
+                <li><strong>Don't use irrelevant hashtags</strong> just because they're popular — Instagram's algorithm penalises mismatched tags.</li>
+                <li><strong>Create a branded hashtag</strong> — unique to your account that your followers use too.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="acc-hash-faq">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-hash-faq')">
+            <span>Hashtag Generator FAQs</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p><strong>Q: How many hashtags should I use on Instagram?</strong><br>A: 5–15 hashtags is the sweet spot for most accounts. Reels benefit from 3–8 focused tags; carousels can handle up to 15.</p>
+              <p><strong>Q: Should hashtags go in the caption or the comments?</strong><br>A: Both work. In the caption is easier for viewers to see; in the first comment keeps your caption visually clean.</p>
+              <p><strong>Q: Do hashtags still work in 2026?</strong><br>A: Yes, but their role has shifted. Hashtags now primarily tell the algorithm what your content is about, helping it recommend your posts to the right audience. They are still one of the most effective free reach tools on Instagram.</p>
+              <p><strong>Q: Can I use the same hashtags every time?</strong><br>A: No — rotate at least 3 different hashtag sets to avoid being flagged for repetitive behavior by Instagram's algorithm.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -548,9 +943,72 @@
       <button class="btn-generate" id="btn-bio" onclick="generate('bio')">
         <span>🪄 Generate Bios</span>
       </button>
-      <div class="usage-bar"><span class="usage-tag" id="usage-bio">Free: 0 / 2 used</span></div>
       <div class="results" id="results-bio"></div>
       <div id="export-wrap-bio" style="display:none;margin-top:.8rem;text-align:right;"><button class="btn-export" onclick="exportAsTxt('bio')">📄 Export as TXT <span class="export-pro-badge">PRO</span></button></div>
+
+      <!-- LEARN MORE: BIO GENERATOR -->
+      <div class="learn-more-section">
+        <div class="learn-more-title">🪄 Learn More About the Bio Generator</div>
+        <div class="accordion-item" id="acc-bio-what">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-bio-what')">
+            <span>What does the Bio Generator do?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>The <strong>AI Bio Generator</strong> writes 5 professional, high-converting Instagram bios based on your profession or niche and chosen tone (bold, fun, minimal, professional, or aesthetic). Each bio is structured to grab attention immediately and turn casual profile visitors into loyal followers.</p>
+              <p>Your Instagram bio is your digital storefront. Within 3 seconds of landing on your page, visitors decide whether to follow you or leave. Our tool ensures your value proposition is clear, readable, and ends with a strong call-to-action (CTA).</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="acc-bio-elements">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-bio-elements')">
+            <span>The perfect formula for an Instagram bio</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>A high-converting Instagram bio follows a structured formula. Here are the key elements:</p>
+              <ul>
+                <li><strong>Clear Value Proposition:</strong> Answer the visitor's main question: "What is in it for me?" within the first 1-2 lines.</li>
+                <li><strong>Credibility / Authority:</strong> Mention your years of experience, awards, notable results, or major achievements to build instant trust.</li>
+                <li><strong>Personality/Vibe:</strong> Use selective emojis and a specific tone to show what type of creator you are.</li>
+                <li><strong>Strong Call-to-Action (CTA):</strong> Point to your link list or product with a finger-pointing emoji (👇) or a clear offer (e.g. "Get my free ebook below").</li>
+                <li><strong>Clean Formatting:</strong> Use line breaks instead of paragraph blocks for clean readability.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="acc-bio-tips">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-bio-tips')">
+            <span>Bio optimization tips and tricks</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <ul>
+                <li><strong>Use keywords in your Name Field:</strong> The name field next to your profile picture is fully searchable. Instead of just writing your name, write "Deepak | Instagram Growth" or "Sara | Travel Creator" to double your search visibility.</li>
+                <li><strong>Leverage the single link limit:</strong> Use link-in-bio services (like Linktree) to aggregate your offers, products, and contact info.</li>
+                <li><strong>Keep it under 150 characters:</strong> Instagram has a strict character limit. Short, punchy lines work much better than long sentences.</li>
+                <li><strong>Avoid generic descriptions:</strong> "Coffee lover, traveler, dreamer" does not tell visitors why they should follow you. Make it about *them*, not just you.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="acc-bio-faq">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-bio-faq')">
+            <span>Bio Generator FAQs</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p><strong>Q: What is the character limit for Instagram bios?</strong><br>A: The limit is 150 characters. All bios generated by our AI are automatically optimized to fit within this constraint.</p>
+              <p><strong>Q: Can I use custom fonts in my bio?</strong><br>A: While you can use custom fonts using external tools, we recommend sticking to readable, standard fonts with emojis. Screen readers and search bots struggle to parse custom Unicode fonts.</p>
+              <p><strong>Q: How often should I change my bio?</strong><br>A: Keep your core description the same, but update your call-to-action line whenever you launch a new product, start a promotion, or offer a new free resource.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -586,9 +1044,70 @@
       <button class="btn-generate" id="btn-reels" onclick="generate('reels')">
         <span>🎬 Generate Reels Ideas</span>
       </button>
-      <div class="usage-bar"><span class="usage-tag" id="usage-reels">Free: 0 / 2 used</span></div>
       <div class="results" id="results-reels"></div>
       <div id="export-wrap-reels" style="display:none;margin-top:.8rem;text-align:right;"><button class="btn-export" onclick="exportAsTxt('reels')">📄 Export as TXT <span class="export-pro-badge">PRO</span></button></div>
+
+      <!-- LEARN MORE: REELS IDEAS GENERATOR -->
+      <div class="learn-more-section">
+        <div class="learn-more-title">🎬 Learn More About the Reels Ideas Generator</div>
+        <div class="accordion-item" id="acc-reels-what">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-reels-what')">
+            <span>What does the Reels Ideas Generator do?</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>The <strong>AI Reels Ideas Generator</strong> generates 5 customized, viral-ready concept pitches for Instagram Reels. Each concept includes a catchy title hook, visual storyboard instructions (what to film), and trending audio style recommendations tailored to your specific account niche.</p>
+              <p>Reels are the primary engine of organic growth on Instagram today. Our tool takes the guesswork out of video creation by suggesting formats and concepts that are mathematically proven to retain attention, drive engagement, and gain algorithm placement.</p>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="acc-reels-viral">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-reels-viral')">
+            <span>The structure of a viral Instagram Reel</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p>A viral Instagram Reel is never an accident. It follows a highly deliberate format designed to optimize watch time and completion rate:</p>
+              <ul>
+                <li><strong>The Hook (0–3 seconds):</strong> A text overlay and a strong visual action that stops the scroll immediately. e.g. "Do NOT do this if you want to grow on Instagram."</li>
+                <li><strong>The Body (3–10 seconds):</strong> Rapid-fire value delivery. Break your tip down into 3 simple steps or present a satisfying transformation. Keep cuts fast (every 1–2 seconds).</li>
+                <li><strong>The CTA / Loop (10–15 seconds):</strong> A smooth wrap-up that encourages saves/shares, or a seamless loop where the ending matches the beginning to double watch time.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="acc-reels-tips">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-reels-tips')">
+            <span>Reels creation tips and practices</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <ul>
+                <li><strong>Always use text captions:</strong> Over 75% of users watch Reels with their sound off. Use auto-captions or text overlays for your main points.</li>
+                <li><strong>Use high-quality lighting:</strong> Shoot in front of a window or use a ring light. Poor video quality is the number one reason the algorithm suppresses Reels.</li>
+                <li><strong>Hop on trending audios early:</strong> Use audios with the diagonal arrow symbol next to their name. Try to find trending audios with under 10k total uses for the best chance of visibility.</li>
+                <li><strong>Keep it short:</strong> 5–15 second Reels have significantly higher completion rates than 60-second videos, giving them a major boost in the algorithm.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item" id="acc-reels-faq">
+          <button class="accordion-btn" onclick="toggleAccordion('acc-reels-faq')">
+            <span>Reels Ideas Generator FAQs</span>
+            <span class="accordion-icon">+</span>
+          </button>
+          <div class="accordion-body">
+            <div class="accordion-content">
+              <p><strong>Q: What niches does this Reels generator support?</strong><br>A: We support over 17 major niches including fitness, food, travel, fashion, business, gaming, education, personal finance, and more.</p>
+              <p><strong>Q: How does the algorithm rank Reels?</strong><br>A: Instagram prioritizes watch time, completion rate, shares, saves, and comments (in that order). Visually engaging edits and strong hooks optimize these metrics.</p>
+              <p><strong>Q: Should I post Reels every single day?</strong><br>A: Consistency is key, but quality beats quantity. Start with 3-4 high-quality Reels per week and scale up to daily posting as you streamline your workflow.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -633,21 +1152,379 @@
   </div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-logo">📸 <span style="background:linear-gradient(90deg,#a855f7,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">GrowthKit</span></div>
-  <p>AI-powered Instagram toolkit for content creators.</p>
-  
-  <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; margin-top:1.5rem; margin-bottom:1rem;">
-    <a href="about.html" style="color:var(--muted); text-decoration:none; font-size:0.9rem; transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">About Us</a>
-    <a href="privacy.html" style="color:var(--muted); text-decoration:none; font-size:0.9rem; transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Privacy Policy</a>
-    <a href="terms.html" style="color:var(--muted); text-decoration:none; font-size:0.9rem; transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Terms of Service</a>
-    <a href="contact.html" style="color:var(--muted); text-decoration:none; font-size:0.9rem; transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Contact Us</a>
+<!-- WHY CHOOSE IGROWTHKIT -->
+<section id="why-choose">
+  <p class="section-label reveal">Why Choose Us</p>
+  <h2 class="section-title reveal">Built for Serious Instagram Creators</h2>
+  <p class="section-sub reveal">Everything you need to beat the algorithm, save hours of manual writing, and scale your organic reach.</p>
+  <div class="why-grid">
+    <div class="glass why-card reveal">
+      <div class="why-icon-wrap" style="background:rgba(124,58,237,0.15); color:var(--purple-light);">⚡</div>
+      <h3>Lightning Fast Generation</h3>
+      <p>Generate highly engaging captions, hashtags, bios, and Reels ideas in less than 5 seconds. No more staring at a blank screen.</p>
+    </div>
+    <div class="glass why-card reveal">
+      <div class="why-icon-wrap" style="background:rgba(59,130,246,0.15); color:var(--blue);">🎯</div>
+      <h3>Algorithm-Optimized Outputs</h3>
+      <p>Our AI is trained specifically on viral social media structures, high-retention hooks, and optimal hashtag distribution models.</p>
+    </div>
+    <div class="glass why-card reveal">
+      <div class="why-icon-wrap" style="background:rgba(236,72,153,0.15); color:var(--pink);">🎨</div>
+      <h3>5 Distinct Vibe Settings</h3>
+      <p>Whether your brand is aesthetic, funny, professional, bold, or clean/minimal, our generator adapts to match your unique brand voice.</p>
+    </div>
+    <div class="glass why-card reveal">
+      <div class="why-icon-wrap" style="background:rgba(168,85,247,0.15); color:var(--purple-light);">💾</div>
+      <h3>One-Click Copy & Export</h3>
+      <p>Instantly copy generated content to your clipboard, or export all results as a clean text file to load into your scheduler.</p>
+    </div>
+    <div class="glass why-card reveal">
+      <div class="why-icon-wrap" style="background:rgba(59,130,246,0.15); color:var(--blue);">🔒</div>
+      <h3>Privacy First & Secure</h3>
+      <p>We respect your privacy. No personal content data is harvested, sold, or shared with third parties. Your workflow remains confidential.</p>
+    </div>
+    <div class="glass why-card reveal">
+      <div class="why-icon-wrap" style="background:rgba(236,72,153,0.15); color:var(--pink);">🚀</div>
+      <h3>Loved by 50,000+ Creators</h3>
+      <p>Join a fast-growing global community of influencers, business owners, and agencies using iGrowthKit to streamline social media production.</p>
+    </div>
   </div>
+</section>
 
-  <p style="margin-top:.8rem;">Made By Surya Brothers❤️ · <a href="#pricing">Upgrade to Pro</a> · <a href="#toolkit">Try Tools Free</a></p>
-  <p style="margin-top:.8rem;font-size:.78rem;">© 2026 GrowthKit. All rights reserved.</p>
+<!-- HOW IT WORKS -->
+<section id="how-it-works">
+  <p class="section-label reveal">Our Workflow</p>
+  <h2 class="section-title reveal">From Concept to Post in 4 Steps</h2>
+  <p class="section-sub reveal">Our streamlined interface lets you create high-converting content with absolutely zero learning curve.</p>
+  <div class="steps">
+    <div class="glass step-card reveal">
+      <div class="step-number">1</div>
+      <h3>Choose Tool</h3>
+      <p>Select Captions, Hashtags, Bio, or Reels Ideas tab based on what content you are building today.</p>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="glass step-card reveal">
+      <div class="step-number">2</div>
+      <h3>Enter Prompt</h3>
+      <p>Type in your basic post topic, profession, or content niche and choose your preferred style vibe.</p>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="glass step-card reveal">
+      <div class="step-number">3</div>
+      <h3>Generate with AI</h3>
+      <p>Click Generate and watch our advanced AI engine create 5 unique tailored variations in seconds.</p>
+      <div class="step-arrow">→</div>
+    </div>
+    <div class="glass step-card reveal">
+      <div class="step-number">4</div>
+      <h3>Copy & Publish</h3>
+      <p>Copy your favorite option with one click, paste it into Instagram, and watch your engagement grow.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <p class="section-label reveal">Social Proof</p>
+  <h2 class="section-title reveal">What Creators Are Saying</h2>
+  <p class="section-sub reveal">Join tens of thousands of happy users who are saving hours of work every week using iGrowthKit.</p>
+  <div class="test-grid">
+    <div class="glass test-card reveal">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">"iGrowthKit has completely changed my workflow. I used to spend 45 minutes writing captions for my business page. Now, I do it in 15 seconds. Incredible tool!"</p>
+      <div class="test-author">
+        <img class="test-avatar" src="https://i.pravatar.cc/150?img=33" alt="Sarah J.">
+        <div>
+          <div class="test-name">Sarah Jenkins</div>
+          <div class="test-handle">@sarahj_creative</div>
+        </div>
+      </div>
+    </div>
+    <div class="glass test-card reveal">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">"The Reels Ideas Generator is pure gold. It gives me a clear hook and hook ideas that actually convert. My reach went up by 150% in the first two weeks!"</p>
+      <div class="test-author">
+        <img class="test-avatar" src="https://i.pravatar.cc/150?img=59" alt="Marcus T.">
+        <div>
+          <div class="test-name">Marcus Thompson</div>
+          <div class="test-handle">@marcust_fit</div>
+        </div>
+      </div>
+    </div>
+    <div class="glass test-card reveal">
+      <div class="test-stars">★★★★★</div>
+      <p class="test-quote">"As an agency owner, we manage 15 client accounts. Having iGrowthKit's hashtag sets and captions on standby has saved us countless hours of manual brainstorming."</p>
+      <div class="test-author">
+        <img class="test-avatar" src="https://i.pravatar.cc/150?img=11" alt="Elena R.">
+        <div>
+          <div class="test-name">Elena Rostova</div>
+          <div class="test-handle">@rostovamedia</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FREQUENTLY ASKED QUESTIONS -->
+<section id="faq">
+  <p class="section-label reveal">Support</p>
+  <h2 class="section-title reveal">Frequently Asked Questions</h2>
+  <p class="section-sub reveal">Have questions about iGrowthKit? Find answers to the most common queries below.</p>
+  <div class="faq-list">
+    <div class="faq-item reveal" id="faq-1">
+      <button class="faq-btn" onclick="toggleAccordion('faq-1')">
+        <span>Is iGrowthKit free to use?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Yes! We offer a fully functional free tier that gives you 2 generations per tool every single day. No credit card is required to use the free tier.
+        </div>
+      </div>
+    </div>
+    <div class="faq-item reveal" id="faq-2">
+      <button class="faq-btn" onclick="toggleAccordion('faq-2')">
+        <span>What do I get in the Pro version?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          The Pro version unlocks unlimited generations across all 4 AI tools, export functionalities as plain text files, early access to new tools we release, and priority access to our highest-quality AI models.
+        </div>
+      </div>
+    </div>
+    <div class="faq-item reveal" id="faq-3">
+      <button class="faq-btn" onclick="toggleAccordion('faq-3')">
+        <span>Can I cancel my Pro subscription at any time?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Yes. Our subscription has no lock-in contract. You can cancel your subscription at any time directly through your user panel or contact billing support.
+        </div>
+      </div>
+    </div>
+    <div class="faq-item reveal" id="faq-4">
+      <button class="faq-btn" onclick="toggleAccordion('faq-4')">
+        <span>How are the captions generated?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          We use state-of-the-art Large Language Models (LLMs) tuned specifically for social media engagement. The AI analyzes your input topic, applies psychological hooks, and inserts high-conversion formatting such as bullet points, emojis, and hashtags.
+        </div>
+      </div>
+    </div>
+    <div class="faq-item reveal" id="faq-5">
+      <button class="faq-btn" onclick="toggleAccordion('faq-5')">
+        <span>Are the generated hashtags up to date?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Yes. Our hashtag lists are updated dynamically based on real-time search volume, trending metrics, and historical data patterns to ensure maximum discoverability.
+        </div>
+      </div>
+    </div>
+    <div class="faq-item reveal" id="faq-6">
+      <button class="faq-btn" onclick="toggleAccordion('faq-6')">
+        <span>Do you offer customer support?</span>
+        <span class="faq-icon">+</span>
+      </button>
+      <div class="faq-answer">
+        <div class="faq-answer-inner">
+          Absolutely! We provide dedicated email support for both free and Pro users. Pro users receive priority support with response times under 12-24 hours. Feel free to reach out via our contact page.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATIONAL CONTENT: INSTAGRAM GROWTH GUIDE -->
+<section id="instagram-guide">
+  <p class="section-label reveal">Education</p>
+  <h2 class="section-title reveal">The Ultimate Instagram Growth Playbook</h2>
+  <p class="section-sub reveal">Master the key pillars of the Instagram algorithm to grow your follower base organic and consistently.</p>
+  
+  <div class="guide-grid">
+    <div class="guide-item reveal">
+      <div class="guide-icon-box">✍️</div>
+      <div>
+        <h3>Caption Copywriting Mastery</h3>
+        <p>Never treat captions as an afterthought. Start with a scroll-stopping hook within the first 3 lines. Tell a relatable story, teach a specific lesson, and always end with a clear Call to Action (CTA) like "Share if you agree!" or "Save this checklist for your next shoot". This is how you drive micro-actions that the algorithm loves.</p>
+      </div>
+    </div>
+    <div class="guide-item reveal">
+      <div class="guide-icon-box">#️⃣</div>
+      <div>
+        <h3>Modern Hashtag Science</h3>
+        <p>Stop stuffing 30 generic tags. Use a balanced mix of 5–15 hashtags. Combine 3 broad category tags (over 1M posts) with 5 niche community tags (100k-500k posts) and 3 specific long-tail tags (under 100k posts). This creates a structured funnel that ranks your post in smaller directories before moving up to competitive feeds.</p>
+      </div>
+    </div>
+    <div class="guide-item reveal">
+      <div class="guide-icon-box">🎬</div>
+      <div>
+        <h3>Viral Reels Best Practices</h3>
+        <p>Instagram is a video-first platform. To win at Reels, focus heavily on the first 3 seconds. Use bold text overlays, dynamic movements, or a text hook that triggers curiosity. Cut all silence or filler words, synchronize your edits to trending audio beats, and write a caption that explains the value in detail to encourage saves and replays.</p>
+      </div>
+    </div>
+    <div class="guide-item reveal">
+      <div class="guide-icon-box">🤝</div>
+      <div>
+        <h3>Engagement & Relationship Building</h3>
+        <p>Engagement is a two-way street. Spend 15 minutes before and after posting engaging with other accounts in your niche. Reply to every single comment on your own posts with a thoughtful question. When you build active conversations, Instagram marks your profile as a high-quality community hub and increases your organic push.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CREATOR TIPS CARDS -->
+<section id="creator-tips">
+  <p class="section-label reveal">Creator Tips</p>
+  <h2 class="section-title reveal">Daily Habits of Top Creators</h2>
+  <p class="section-sub reveal">Small tweaks to your creation workflow can yield massive results. Implement these strategies today.</p>
+  <div class="tips-grid">
+    <div class="tip-card reveal">
+      <div class="tip-emoji">📅</div>
+      <h3>Posting Frequency</h3>
+      <p>Aim for 3-5 Reels and 1-2 Carousels per week. Consistency tells the algorithm you are active, keeping you in your followers' daily feeds.</p>
+    </div>
+    <div class="tip-card reveal">
+      <div class="tip-emoji">⏰</div>
+      <h3>Best Times to Post</h3>
+      <p>Post 30-45 minutes before your audience's peak activity window. Check your creator insights for optimal time zones.</p>
+    </div>
+    <div class="tip-card reveal">
+      <div class="tip-emoji">🪝</div>
+      <h3>Hook Writing Rule</h3>
+      <p>Always spend 50% of your creation time on the hook (title and first frame). If they don't stop, the rest of the video is wasted.</p>
+    </div>
+    <div class="tip-card reveal">
+      <div class="tip-emoji">📱</div>
+      <h3>Story Engagement</h3>
+      <p>Use interactive story widgets (polls, Q&A sliders, quizzes) daily. High story engagement keeps your profile at the front of the feeds.</p>
+    </div>
+    <div class="tip-card reveal">
+      <div class="tip-emoji">📚</div>
+      <h3>Carousel Saves Trick</h3>
+      <p>Include a "Cheatsheet Summary" on your final carousel slide. This encourages viewers to save the post, boosting your algorithm ranking.</p>
+    </div>
+  </div>
+</section>
+
+<!-- AI TIPS -->
+<section id="ai-tips">
+  <p class="section-label reveal">AI Strategies</p>
+  <h2 class="section-title reveal">How to Use AI for Maximum Growth</h2>
+  <p class="section-sub reveal">AI is a powerful collaborator. Learn how to combine artificial intelligence with human creativity.</p>
+  <div class="ai-tips-inner">
+    <div>
+      <p>AI tools like iGrowthKit are designed to automate the heavy lifting of drafting, formatting, and structuring. However, the most successful creators use AI as a foundation, not the final product. By infusing your unique personality and real-life stories into AI-generated frameworks, you build authentic, high-converting content.</p>
+      <ul>
+        <li>Use AI to draft 5 title hook ideas, then choose the one that feels most aligned with your voice.</li>
+        <li>Generate AI captions, then add your own personal anecdotes, case studies, or business details to build trust.</li>
+        <li>Use AI to brainstorm reels storyboards when you are facing creative block.</li>
+      </ul>
+    </div>
+    <div class="ai-tips-highlight reveal">
+      <h3>The Golden Rule of AI Creation</h3>
+      <p style="margin-bottom: 0; color: #f1f5f9;">"Let AI write the skeleton, but make sure your own experience provides the heartbeat." Use iGrowthKit to handle formatting, search strategies, and outline templates so you can focus entirely on executing stunning visual content and building deep community connections.</p>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST BLOG ARTICLES -->
+<section id="blog-preview">
+  <p class="section-label reveal font-semibold">Creator Blog</p>
+  <h2 class="section-title reveal">Latest Creator Insights</h2>
+  <p class="section-sub reveal">Stay ahead of the curve with our data-backed articles, strategy playbooks, and algorithmic updates.</p>
+  
+  <div class="blog-grid">
+    <div class="glass blog-card reveal">
+      <div class="blog-category">Captions</div>
+      <h3>How to Write Viral Instagram Captions That Get 10x More Engagement</h3>
+      <p>Learn the exact copywriting blueprints, psychological hooks, and call-to-action strategies that drive massive saves and comments on your posts.</p>
+      <div class="blog-meta">
+        <span>📅 July 2026</span>
+        <span>⏱️ 5 min read</span>
+      </div>
+      <a href="blog-1.html" class="blog-read-more">Read Article →</a>
+    </div>
+    <div class="glass blog-card reveal">
+      <div class="blog-category">Hashtags</div>
+      <h3>100 Best Instagram Hashtags for Every Niche in 2026</h3>
+      <p>Get access to our curated list of trending hashtags for fitness, food, travel, fashion, and business, along with the optimal deployment strategy.</p>
+      <div class="blog-meta">
+        <span>📅 July 2026</span>
+        <span>⏱️ 6 min read</span>
+      </div>
+      <a href="blog-2.html" class="blog-read-more">Read Article →</a>
+    </div>
+    <div class="glass blog-card reveal">
+      <div class="blog-category">Reels</div>
+      <h3>Instagram Reels Ideas: 50 Creative Concepts for Any Niche</h3>
+      <p>Never run out of video content ideas. Explore these 50 plug-and-play storyboards and hook ideas designed to blow up your reach.</p>
+      <div class="blog-meta">
+        <span>📅 July 2026</span>
+        <span>⏱️ 7 min read</span>
+      </div>
+      <a href="blog-3.html" class="blog-read-more">Read Article →</a>
+    </div>
+  </div>
+</section>
+
+<!-- EXPANDED FOOTER -->
+<footer class="footer-main">
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <div class="footer-logo-row">
+        <span>📸</span>
+        <span style="background:linear-gradient(90deg,#a855f7,#3b82f6); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">iGrowthKit</span>
+      </div>
+      <p>Advanced AI-powered toolkit for content creators, designed to optimize organic reach, engagement, and consistent audience growth on Instagram.</p>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="index.html#toolkit">AI Caption Generator</a></li>
+        <li><a href="index.html#toolkit">Hashtag Optimizer</a></li>
+        <li><a href="index.html#toolkit">AI Bio Creator</a></li>
+        <li><a href="index.html#toolkit">Reels Idea Tool</a></li>
+        <li><a href="index.html#pricing">Pro Pricing Plans</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="blog.html">Creator Blog</a></li>
+        <li><a href="index.html#faq">Frequently Asked Questions</a></li>
+        <li><a href="about.html">About Our Mission</a></li>
+        <li><a href="contact.html">Support Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+        <li><a href="cookie.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="footer-bottom">
+    <p>© 2026 iGrowthKit. All rights reserved. Made with ❤️ by Surya Brothers.</p>
+    <p>
+      <a href="privacy.html">Privacy</a> · 
+      <a href="terms.html">Terms</a> · 
+      <a href="cookie.html">Cookies</a>
+    </p>
+  </div>
 </footer>
+
 
 <script type="module">
   window.OPENROUTER_API_KEY = import.meta.env.VITE_OPENROUTER_API_KEY;
@@ -661,6 +1538,13 @@ const SHOW_FREE_RESULTS = isPro ? Infinity : 2;
 function toggleMobileMenu() {
   const navLinks = document.getElementById('nav-links');
   navLinks.classList.toggle('active');
+}
+
+function toggleAccordion(id) {
+  const el = document.getElementById(id);
+  if (el) {
+    el.classList.toggle('open');
+  }
 }
 
 const todayStr = new Date().toDateString();

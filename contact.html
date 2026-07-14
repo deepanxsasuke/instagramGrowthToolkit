@@ -3,7 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact Us - GrowthKit</title>
+  <title>Contact Us - iGrowthKit</title>
+  <meta name="description" content="Get in touch with iGrowthKit support team. Contact us for billing queries, technical issues, copyright questions, or partnerships." />
+  <meta name="keywords" content="contact igrowthkit, support email, copyright claims, dmca requests, igrowthkit support" />
+  <link rel="canonical" href="https://growthkit.app/contact.html" />
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://growthkit.app/contact.html" />
+  <meta property="og:title" content="Contact Us - iGrowthKit" />
+  <meta property="og:description" content="Get in touch with iGrowthKit support team. Contact us for billing queries, technical issues, or partnerships." />
+  <meta property="og:image" content="https://growthkit.app/favicon.png" />
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Contact Us - iGrowthKit" />
+  <meta name="twitter:description" content="Get in touch with iGrowthKit support team." />
+  <meta name="twitter:image" content="https://growthkit.app/favicon.png" />
+
+  <!-- Schema.org Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact iGrowthKit",
+    "url": "https://growthkit.app/contact.html",
+    "description": "Contact page for iGrowthKit customers to submit support inquiries, billing questions, and business queries."
+  }
+  </script>
+
   <link rel="icon" href="favicon.png" type="image/png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -21,14 +49,25 @@
       --muted: #94a3b8;
       --radius: 20px;
     }
+    html { scroll-behavior: smooth; }
     body {
       font-family: 'Inter', sans-serif;
       background: var(--bg);
       color: var(--text);
       min-height: 100vh;
+      overflow-x: hidden;
       display: flex;
       flex-direction: column;
     }
+
+    /* BACKGROUND ORBS */
+    .orb {
+      position: fixed; border-radius: 50%; filter: blur(120px);
+      pointer-events: none; z-index: 0;
+    }
+    .orb-1 { width: 600px; height: 600px; background: rgba(124,58,237,0.15); top: -200px; left: -150px; }
+    .orb-2 { width: 500px; height: 500px; background: rgba(59,130,246,0.1); bottom: -150px; right: -100px; }
+
     nav {
       position: fixed; top: 0; width: 100%; z-index: 100;
       background: rgba(6,6,18,0.7); backdrop-filter: blur(20px);
@@ -40,56 +79,316 @@
     .nav-logo span.icon { font-size: 1.4rem; }
     .nav-logo .grad { background: linear-gradient(90deg,#a855f7,#3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     
+    .nav-links { display: flex; gap: 1.5rem; align-items: center; }
+    .nav-links a { color: var(--muted); text-decoration: none; font-size: .9rem; font-weight: 500; transition: color .2s; }
+    .nav-links a:hover { color: var(--text); }
+    .btn-nav {
+      background: linear-gradient(135deg,var(--purple),var(--blue));
+      color: #fff; border: none; padding: .5rem 1.2rem; border-radius: 50px;
+      font-size: .85rem; font-weight: 600; cursor: pointer; transition: opacity .2s, transform .2s;
+      text-decoration: none; display: inline-block;
+    }
+    .btn-nav:hover { opacity: .85; transform: translateY(-1px); }
+
     main {
-      flex: 1; padding: 120px 1.5rem 60px; max-width: 800px; margin: 0 auto; width: 100%;
+      flex: 1; padding: 120px 1.5rem 60px; max-width: 1000px; margin: 0 auto; width: 100%; position: relative; z-index: 1;
     }
-    main h1 { font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem; }
-    main p { color: var(--muted); line-height: 1.8; margin-bottom: 1.2rem; font-size: 1.05rem; }
-    main h2 { font-size: 1.5rem; font-weight: 700; margin: 2rem 0 1rem; color: #fff; }
-    main a { color: var(--blue); text-decoration: none; }
-    main a:hover { text-decoration: underline; }
+    .hero-section { text-align: center; margin-bottom: 4rem; }
+    .badge {
+      display: inline-flex; align-items: center; gap: .4rem;
+      background: rgba(168,85,247,0.15); border: 1px solid rgba(168,85,247,0.3);
+      color: var(--purple-light); font-size: .8rem; font-weight: 600;
+      padding: .35rem .85rem; border-radius: 50px; margin-bottom: 1.5rem;
+    }
+    h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; letter-spacing: -1px; margin-bottom: 1.2rem; line-height: 1.2; }
+    h1 .grad { background: linear-gradient(135deg,#a855f7,#3b82f6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    .lead { font-size: 1.2rem; color: var(--muted); line-height: 1.7; max-width: 600px; margin: 0 auto; }
+
+    .grid { display: grid; grid-template-columns: 1.2fr 1.8fr; gap: 2rem; margin-bottom: 4rem; }
+    @media(max-width: 800px) { .grid { grid-template-columns: 1fr; } }
+
+    .glass-card {
+      background: rgba(255,255,255,0.03); backdrop-filter: blur(20px);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      padding: 2.2rem;
+    }
+    .info-list { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1rem; }
+    .info-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .info-icon { font-size: 1.5rem; }
+    .info-item h3 { font-size: 0.95rem; font-weight: 700; color: #fff; margin-bottom: 0.2rem; }
+    .info-item p { font-size: 0.9rem; color: var(--muted); line-height: 1.5; margin-bottom: 0; }
+    .info-item a { color: var(--purple-light); text-decoration: none; }
+    .info-item a:hover { text-decoration: underline; }
+
+    /* FORM STYLES */
+    .form-group { margin-bottom: 1.2rem; }
+    .form-group label { display: block; font-size: .85rem; font-weight: 600; color: var(--muted); margin-bottom: .5rem; text-transform: uppercase; letter-spacing: 1px; }
+    .form-input {
+      width: 100%; background: rgba(255,255,255,0.07); border: 1px solid var(--border);
+      color: var(--text); border-radius: 12px; padding: .8rem 1rem; font-size: .95rem;
+      font-family: inherit; outline: none; transition: border-color .2s, box-shadow .2s;
+    }
+    .form-input:focus { border-color: var(--purple-light); box-shadow: 0 0 0 3px rgba(168,85,247,0.15); }
+    textarea.form-input { min-height: 120px; resize: vertical; }
     
-    footer {
-      border-top: 1px solid var(--border); padding: 2.5rem 1.5rem; text-align: center; color: var(--muted); font-size: .875rem;
+    .btn-submit {
+      background: linear-gradient(135deg,var(--purple),var(--blue));
+      color: #fff; border: none; padding: .85rem 2rem; border-radius: 50px;
+      font-size: 1rem; font-weight: 700; cursor: pointer; width: 100%;
+      box-shadow: 0 4px 20px rgba(124,58,237,0.4);
+      transition: transform .2s, box-shadow .2s;
     }
-    footer .footer-logo { font-size: 1.1rem; font-weight: 800; margin-bottom: .5rem; }
+    .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(124,58,237,0.55); }
+
+    /* FAQ SECTION */
+    .faq-title { font-size: 1.5rem; font-weight: 800; margin-bottom: 1.5rem; text-align: center; }
+    .accordion-item {
+      border: 1px solid var(--border); border-radius: 14px; margin-bottom: .7rem;
+      overflow: hidden; transition: border-color .2s; background: rgba(255,255,255,.01);
+    }
+    .accordion-item:hover { border-color: rgba(168,85,247,.3); }
+    .accordion-btn {
+      width: 100%; background: transparent; border: none; color: var(--text);
+      padding: 1rem 1.3rem; text-align: left; font-size: .95rem; font-weight: 600;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      font-family: inherit;
+    }
+    .accordion-icon {
+      font-size: 1.1rem; transition: transform .3s; color: var(--purple-light);
+    }
+    .accordion-item.open .accordion-icon { transform: rotate(45deg); }
+    .accordion-body {
+      max-height: 0; overflow: hidden; transition: max-height .4s ease;
+      background: rgba(255,255,255,.01);
+    }
+    .accordion-item.open .accordion-body { max-height: 300px; }
+    .accordion-content {
+      padding: 0 1.3rem 1.3rem; color: var(--muted); font-size: .9rem; line-height: 1.7;
+    }
+
+    /* EXPANDED FOOTER */
+    .footer-main {
+      border-top: 1px solid var(--border); padding: 4rem 1.5rem 2rem; background: rgba(6,6,18,0.5); backdrop-filter: blur(10px); position: relative; z-index: 1; margin-top: auto;
+    }
+    .footer-grid {
+      max-width: 1100px; margin: 0 auto;
+      display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 2.5rem;
+    }
+    @media(max-width:768px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
+      .footer-brand-col { grid-column: 1 / -1; }
+    }
+    @media(max-width:480px) { .footer-grid { grid-template-columns: 1fr; } }
+    .footer-brand-col .footer-logo-row {
+      display: flex; align-items: center; gap: .6rem; font-weight: 800; font-size: 1.15rem; margin-bottom: .8rem;
+    }
+    .footer-brand-col p { color: var(--muted); font-size: .875rem; line-height: 1.7; max-width: 300px; margin-bottom: 1.2rem; }
+    .footer-social { display: flex; gap: .7rem; }
+    .footer-social a {
+      width: 36px; height: 36px; border-radius: 10px; background: rgba(255,255,255,.06);
+      border: 1px solid var(--border); display: flex; align-items: center; justify-content: center;
+      font-size: 1rem; text-decoration: none; transition: background .2s, border-color .2s;
+    }
+    .footer-social a:hover { background: rgba(168,85,247,.2); border-color: rgba(168,85,247,.4); }
+    .footer-col h4 { font-size: .85rem; font-weight: 700; color: var(--text); margin-bottom: 1rem; text-transform: uppercase; letter-spacing: 1px; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .6rem; }
+    .footer-col ul li a { color: var(--muted); text-decoration: none; font-size: .875rem; transition: color .2s; }
+    .footer-col ul li a:hover { color: var(--text); }
+    .footer-bottom {
+      max-width: 1100px; margin: 2rem auto 0; padding-top: 1.5rem;
+      border-top: 1px solid var(--border); display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 1rem;
+      font-size: .8rem; color: var(--muted);
+    }
+    .footer-bottom a { color: var(--muted); text-decoration: none; }
+    .footer-bottom a:hover { color: var(--text); }
   </style>
 </head>
 <body>
 
+<div class="orb orb-1"></div>
+<div class="orb orb-2"></div>
+
 <nav>
   <a href="index.html" class="nav-logo">
     <span class="icon">📸</span>
-    <span class="grad">GrowthKit</span>
+    <span class="grad">iGrowthKit</span>
   </a>
+  <div class="nav-links">
+    <a href="index.html#features">Features</a>
+    <a href="index.html#toolkit">Tools</a>
+    <a href="blog.html">Blog</a>
+    <a href="index.html#pricing" class="btn-nav">Upgrade Pro</a>
+  </div>
 </nav>
 
 <main>
-  <h1>Contact Us</h1>
-  <p>If you have any questions, feedback, copyright concerns, or DMCA requests, feel free to contact us.</p>
-  
-  <div style="background:var(--surface); border:1px solid var(--border); padding:1.5rem; border-radius:16px; margin:2rem 0;">
-    <p style="margin-bottom:.5rem; color:#fff;"><strong style="color:var(--purple-light);">Email:</strong> <a href="mailto:dpllabs2026@gmail.com">dpllabs2026@gmail.com</a></p>
-    <p style="margin-bottom:0; color:#fff;"><strong style="color:var(--purple-light);">Response Time:</strong> Within 24–48 hours</p>
+  <div class="hero-section">
+    <div class="badge">💬 Support Centre</div>
+    <h1>Get in <span class="grad">Touch</span></h1>
+    <p class="lead">Have a query? Technical issue? Billing concern? Fill out the form or write to us directly, and our support team will help you out.</p>
   </div>
 
-  <p style="font-size:0.9rem; margin-top:2rem;">Last updated: January 2026</p>
+  <div class="grid">
+    <div class="glass-card">
+      <h2>Contact Info</h2>
+      <div class="info-list">
+        <div class="info-item">
+          <div class="info-icon">✉️</div>
+          <div>
+            <h3>Support Email</h3>
+            <p><a href="mailto:dpllabs2026@gmail.com">dpllabs2026@gmail.com</a></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">⏳</div>
+          <div>
+            <h3>Response Time</h3>
+            <p>Within 24–48 hours</p>
+            <p><small style="color:var(--muted); font-size:0.78rem;">Pro subscribers typically receive answers within 12 hours.</small></p>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">🗓️</div>
+          <div>
+            <h3>Working Hours</h3>
+            <p>Monday to Friday</p>
+            <p>9:00 AM – 6:00 PM IST</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="glass-card">
+      <h2>Send a Message</h2>
+      <form id="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" class="form-input" placeholder="e.g. Deepak Kumar" required />
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" class="form-input" placeholder="e.g. deepak@example.com" required />
+        </div>
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <input type="text" id="subject" class="form-input" placeholder="e.g. Subscription Billing Issue" required />
+        </div>
+        <div class="form-group">
+          <label for="message">Your Message</label>
+          <textarea id="message" class="form-input" placeholder="Describe your issue or query here in detail..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit" id="btn-submit">Submit Message</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="faq-section" style="max-width: 780px; margin: 0 auto 3rem;">
+    <h2 class="faq-title">Quick Help FAQ</h2>
+    <div class="accordion-item" id="faq-q1">
+      <button class="accordion-btn" onclick="toggleAccordion('faq-q1')">
+        <span>My billing failed but money was deducted. What should I do?</span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-content">
+          Do not worry. If Razorpay deducts payment but registration fails, the amount is automatically refunded by your bank within 3-5 business days. Please write to support with the transaction reference ID if it is not resolved.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item" id="faq-q2">
+      <button class="accordion-btn" onclick="toggleAccordion('faq-q2')">
+        <span>How do I cancel my subscription?</span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-content">
+          You can cancel your subscription at any time. Simply email us from your registered account email, and we will cancel your auto-renewal within 24 hours.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item" id="faq-q3">
+      <button class="accordion-btn" onclick="toggleAccordion('faq-q3')">
+        <span>Can I request a custom API plan?</span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <div class="accordion-content">
+          Yes! If you are a social media agency or developer looking to integrate our AI tools into your workflows, please send us a partnership query through the contact form.
+        </div>
+      </div>
+    </div>
+  </div>
 </main>
 
-<footer>
-  <div class="footer-logo">📸 <span style="background:linear-gradient(90deg,#a855f7,#3b82f6);-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-weight:800;">GrowthKit</span></div>
-  <p>AI-powered Instagram toolkit for content creators.</p>
-  
-  <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap; margin-top:1.5rem; margin-bottom:1rem;">
-    <a href="about.html" style="color:var(--muted); text-decoration:none; font-size:0.9rem; transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">About Us</a>
-    <a href="privacy.html" style="color:var(--muted); text-decoration:none; font-size:0.9rem; transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Privacy Policy</a>
-    <a href="terms.html" style="color:var(--muted); text-decoration:none; font-size:0.9rem; transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Terms of Service</a>
-    <a href="contact.html" style="color:var(--muted); text-decoration:none; font-size:0.9rem; transition:color .2s;" onmouseover="this.style.color='var(--text)'" onmouseout="this.style.color='var(--muted)'">Contact Us</a>
+<footer class="footer-main">
+  <div class="footer-grid">
+    <div class="footer-brand-col">
+      <div class="footer-logo-row">
+        <span>📸</span>
+        <span style="background:linear-gradient(90deg,#a855f7,#3b82f6); -webkit-background-clip:text; -webkit-text-fill-color:transparent;">iGrowthKit</span>
+      </div>
+      <p>Advanced AI-powered toolkit for content creators, designed to optimize organic reach, engagement, and consistent audience growth on Instagram.</p>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Product</h4>
+      <ul>
+        <li><a href="index.html#toolkit">AI Caption Generator</a></li>
+        <li><a href="index.html#toolkit">Hashtag Optimizer</a></li>
+        <li><a href="index.html#toolkit">AI Bio Creator</a></li>
+        <li><a href="index.html#toolkit">Reels Idea Tool</a></li>
+        <li><a href="index.html#pricing">Pro Pricing Plans</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="blog.html">Creator Blog</a></li>
+        <li><a href="index.html#faq">Frequently Asked Questions</a></li>
+        <li><a href="about.html">About Our Mission</a></li>
+        <li><a href="contact.html">Support Contact</a></li>
+      </ul>
+    </div>
+    
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms & Conditions</a></li>
+        <li><a href="cookie.html">Cookie Policy</a></li>
+      </ul>
+    </div>
   </div>
-
-  <p style="margin-top:.8rem;">Made By Surya Brothers❤️ · <a href="index.html#pricing" style="color:var(--purple-light);text-decoration:none;">Upgrade to Pro</a></p>
-  <p style="margin-top:.8rem;font-size:.78rem;">© 2026 GrowthKit. All rights reserved.</p>
+  
+  <div class="footer-bottom">
+    <p>© 2026 iGrowthKit. All rights reserved. Made with ❤️ by Surya Brothers.</p>
+    <p>
+      <a href="privacy.html">Privacy</a> · 
+      <a href="terms.html">Terms</a> · 
+      <a href="cookie.html">Cookies</a>
+    </p>
+  </div>
 </footer>
+
+<script>
+function toggleAccordion(id) {
+  const el = document.getElementById(id);
+  if (el) el.classList.toggle('open');
+}
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const name = document.getElementById('name').value;
+  const email = document.getElementById('email').value;
+  const subject = document.getElementById('subject').value;
+  const message = document.getElementById('message').value;
+
+  const mailtoLink = `mailto:dpllabs2026@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage:\n" + message)}`;
+  window.location.href = mailtoLink;
+}
+</script>
 
 </body>
 </html>
