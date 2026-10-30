@@ -1584,7 +1584,7 @@ async function callOpenRouter(prompt, modelIndex) {
           { role: "user", content: prompt }
         ],
         temperature: 0.8,
-        max_tokens: 600
+        max_tokens: 1200
       })
     });
   } catch (e) {
@@ -1625,7 +1625,7 @@ function buildPrompt(tool, input1, input2) {
 
 function parseAIResults(tool, rawText, input1) {
   // Remove any system chatter or reasoning blocks if they exist (common in some OpenRouter models)
-  const cleanedText = rawText.replace(/<thought>[\s\S]*?<\/thought>/gi, '').replace(/\*\*Reasoning:\*\*[\s\S]*?\n/gi, '').trim();
+  const cleanedText = rawText.replace(/<think>[\s\S]*?<\/think>/gi, '').replace(/<thinking>[\s\S]*?<\/thinking>/gi, '').replace(/<thought>[\s\S]*?<\/thought>/gi, '').replace(/<reasoning>[\s\S]*?<\/reasoning>/gi, '').replace(/\*\*Reasoning:\*\*[\s\S]*?\n/gi, '').trim();
   
   if (tool === 'hashtags') {
     const setMatches = cleanedText.match(/Set\s*\d+\s*:([^\n]+)/gi) || [];
@@ -1864,7 +1864,7 @@ async function generate(tool) {
     const rawText = await callOpenRouter(prompt);
     items = parseAIResults(tool, rawText, input1, input2);
     // Ensure we always have at least some results from fallback if AI returns too little
-    if (items.length < 2) throw new Error('AI returned insufficient content');
+    if (items.length < 1) throw new Error('AI returned insufficient content');
   } catch (err) {
     console.warn('OpenRouter API error, using fallback:', err.message);
     if (tool === 'captions') items = contentBank.captions(input1, input2);
