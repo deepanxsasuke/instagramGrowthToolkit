@@ -1557,11 +1557,11 @@ const usage = savedUsage.counts;
 
 // ─────────────────────── OPENROUTER API (Multi Free Model Fallback) ───────────────────────
 const FREE_MODELS = [
-  "google/gemma-4-31b-it:free",
-  "google/gemma-4-26b-a4b-it:free",
-  "thinkingmachines/inkling-small:free",
   "nvidia/nemotron-3.5-lightning:free",
-  "nvidia/nemotron-3-ultra-550b-a55b:free"
+  "nvidia/nemotron-3-ultra-550b-a55b:free",
+  "nvidia/nemotron-3-nano-omni-30b-a3b-reasoning:free",
+  "google/gemma-4-31b-it:free",
+  "dots-studio/dots-3-note-preview:free"
 ];
 
 async function callOpenRouter(prompt, modelIndex) {
@@ -1596,7 +1596,7 @@ async function callOpenRouter(prompt, modelIndex) {
   }
   if (!response.ok) {
     var err = await response.json().catch(function() { return {}; });
-    if ((response.status === 503 || response.status === 429 || response.status === 502 || response.status === 404) && modelIndex + 1 < FREE_MODELS.length) {
+    if ((response.status === 503 || response.status === 429 || response.status === 502 || response.status === 404 || response.status === 403) && modelIndex + 1 < FREE_MODELS.length) {
       showToast('Model busy, trying next free model...');
       await new Promise(function(r) { setTimeout(r, 1500); });
       return callOpenRouter(prompt, modelIndex + 1);
