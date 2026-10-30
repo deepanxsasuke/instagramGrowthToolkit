@@ -1583,6 +1583,7 @@ async function callOpenRouter(prompt, modelIndex) {
           { role: "system", content: "You are a professional Instagram content strategist and caption writer." },
           { role: "user", content: prompt }
         ],
+        reasoning: { effort: "none" },
         temperature: 0.8,
         max_tokens: 1200
       })
