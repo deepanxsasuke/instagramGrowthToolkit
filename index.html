@@ -1555,7 +1555,7 @@ if (savedUsage.date !== todayStr) {
 }
 const usage = savedUsage.counts;
 
-// ─────────────────────── OPENROUTER API (Qwen 2.5 7B) ───────────────────────
+// ─────────────────────── OPENROUTER API (Auto Free Router � Always \OPENROUTER API (Llama 3.1 8B � Always Free)) ───────────────────────
 async function callOpenRouter(prompt, retried = false) {
   const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
     method: 'POST',
@@ -1566,7 +1566,7 @@ async function callOpenRouter(prompt, retried = false) {
       'X-Title': 'Instagram Growth Toolkit'
     },
     body: JSON.stringify({
-      model: "openrouter/auto",
+      model: "openrouter/auto:free",
       messages: [
         { role: "system", content: "You are a professional Instagram content strategist and caption writer." },
         { role: "user", content: prompt }
